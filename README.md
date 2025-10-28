@@ -10,3 +10,6 @@ This was a 2-credit-hour course with a pass/fail grading scheme. There were no e
 # Structure
 
 Each folder (A01, A02, etc.) contains the files for each assignment. In, for example, A01, there are several local-operating files, but the important ones are A01.tex and A01.pdf. The .tex file is the LaTeX written for the assignment, and the .pdf file is the result. This is consistent across all assignment folders.
+
+The LaTeX Base File is a template which was given to us by our insctuctor.
+Latex Symbols is a file with common LateX notation, as a reminder for me while I worked on assignments.
