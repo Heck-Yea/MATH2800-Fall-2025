@@ -1,0 +1,212 @@
+\documentclass[11pt]{article}
+\usepackage{graphics,graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=1.cm,bottom=2cm]{geometry}
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\theequation}{\arabic{equation}}
+
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+
+% HEADER %
+\begin{document}
+\title{MATH 2800-01: Mathematics Major Seminar}
+\line
+\leftright{Assignment \# 04 ~~~~ 15 Oct 2025}{David Haberkorn}
+% END HEADER %
+
+
+\section*{Problem 1}
+
+    \textbf{Result:} Let $x \in \mathbb{Z}$. If $7x-8$ is even, then $x$ is even.\\
+    \\
+    \textbf{Proof, by contrapositive:} Let $x$ be odd. By definition, this means that $x = 2a + 1$ for some $a \in \mathbb{Z}$. Therefore,
+
+    $$ 
+    7x-8 = 7(2a+1)-8 = 14a+7-8 = 14a+1 = 2(7a)+1
+    $$
+    By definition, since $7a \in \mathbb{Z}$, $7x-8$ is odd. \hfill $\Box$
+
+
+\newpage
+
+\section*{Problem 2}
+
+    \textbf{Result:} Let $x \in \mathbb{Z}$. If $11x-5$ is odd, then $x$ is even.\\
+    \\
+    \textbf{Proof:} Let $11x-5$ be odd. By definition, this means that $11x-5 = 2a + 1$ for some $a \in \mathbb{Z}$. Therefore,
+
+    $$
+        11x-5=2a+1
+        11x=2a+6
+        11x=2(a+3)
+    $$
+    By definition, since $a+3 \in \mathbb{Z}$, $11x$ is even. \\
+    By the proof shown in example 7 from the lecture, we know that the product of an odd integer and some other integer is even if and only if the other integer is even. Using this fact, we can deduce that since $11x$ is even, and $11$ is odd, then $x$ must be even. \hfill $\Box$
+
+
+\newpage
+
+\section*{Problem 3}
+
+    \textbf{Result:} If $a$ and $b$ are two distinct real numbers, then either $\frac{a+b}{2} > a$ or $\frac{a+b}{2}>b$.\\
+    \\
+    \textbf{Proof Strategy:} We will use constrapositive. We will work to show that if $\frac{a+b}{2} \leq a$ and $\frac{a+b}{2} \leq b$, then $a$ and $b$ are not distinct, meaning $a=b$. We will work through two cases, then combine the two cases into one result. \hfill $\blacklozenge$\\
+    \\
+    \textbf{Proof, by contrapositive:} There are two cases we must prove. Let case 1 be $\frac{a+b}{2} \leq a$, and let case 2 be $\frac{a+b}{2} \leq b$, for any two distinct real numbers $a$ and $b$.
+
+    \textit{Case 1}: Let $\frac{a+b}{2} \leq a$, for $a, b \in \mathbb{R}$. Therefore, 
+    \begin{align}
+        \frac{a+b}{2} & \le a \notag \\
+        a+b & \le 2a \notag \\
+        b & \le a \label{ineq1}
+    \end{align}
+    Inequality (1) is our first result.
+
+     \textit{Case 2}: Let $\frac{a+b}{2} \leq b$, for $a, b \in \mathbb{R}$. Therefore, 
+    \begin{align}
+        \frac{a+b}{2} & \le b \notag \\
+        a+b & \le 2b \notag \\
+        a & \le b \label{ineq2}
+    \end{align}
+    Inequality (2) is our second result.
+    \textit{Combining cases:} Combining results (1) and (2), we get the dual inequalities 
+    $$
+        b \leq a \qquad a \leq b
+    $$
+    For both to be true, then $a$ must equal $b$, which is the result we have been attempting to prove. \hfill $\Box$
+
+\newpage
+
+
+\section*{Problem 4}
+
+    \textbf{Result:} If $xy$ and $x+y$ are even and $x, y \in \mathbb{Z}$, then both $x$ and $y$ are even.\\
+    \\
+    \textbf{Proof Strategy:} We will use constrapositive. We will work to show that if $x$ or $y$ is odd, then either $xy$ or $x+y$ is odd. \hfill $\blacklozenge$\\
+    \\
+    \textbf{Proof, by contrapositive:} Let $x, y \in \mathbb{Z}$, and let $x$ or $y$ be odd. By definition, there exists integers $m$ and $n$ such that $x=2m+1$ and $y=2n+1$. Without loss of generality, we assume that $x$ is odd.\\
+    We work to show that $xy$ or $x+y$ is odd when $x$ is odd. $y$ can be even or odd, so we will prove two cases.\\
+    \textit{Case 1:} Let $y$ be odd. By definition, $y = 2k+1$ for some $k \in \mathbb{Z}$. Therefore, 
+    \begin{align}
+        xy = (2m+1)(2k+1) = 4mk+2m+2k+1 = 2(2mk+m+k)+1 \notag
+    \end{align}
+    By definition, since $2mk+m+k \in \mathbb{Z}$, $xy$ is odd. \\
+    \textit{Case 2:} Let $y$ be even. By definition, $y = 2l$ for some $l \in \mathbb{Z}$. Therefore, 
+    \begin{align}
+        x+y = (2m+1)+(2l) = 2m+2l+1= 2(m+l)+1 \notag
+    \end{align}
+    By definition, since $m+l \in \mathbb{Z}$, $x+y$ is odd.\\
+    Both cases have been proven. \hfill $\Box$
+
+\newpage
+
+
+
+\section*{Problem 5}
+
+    \textbf{Result:} For any integer $x$, $3x+1$ is even if and only if $5x-2$ is odd.\\
+    \\
+    \textbf{Proof Strategy:} We will use two cases, one where $x$ is even, and one where $x$ is odd. We will then prove the biconditional for both cases. \hfill $\blacklozenge$\\
+    \\
+    \textbf{Proof:} Let $x$ be an integer. We will prove the biconditional with two cases. \\
+    \textit{Case 1:} Let $x$ be an even integer. By definition, $x = 2a$ for some integer $a$. Therefore,
+    \begin{align}
+        3x+1 = 3(2a)+1 = 6a+1 = 2(3a)+1 \notag \\
+        5x-2 = 5(2a)-2 = 10a-2 = 2(5a) \notag
+    \end{align}
+    By definition, since $3a, 5a \in \mathbb{Z}$, then $3x+1$ is odd and $5x-2$ is even.\\
+    Since neither $3x+1$ is even, nor $5x-2$ is odd when $x$ is even, we can mark this case irrelevant.\\
+    \textit{Case 2:} Let $x$ be an odd integer. By definition, $x = 2b+1$ for some integer $b$. Therefore,
+    \begin{align}
+        3x+1 = 3(2b+1)+1 = 6b+3+1 = 6b+4 = 2(3b+2) \notag \\
+        5x-2 = 5(2b+1)-2 = 10b+5-2 = 10b+2+1 = 2(5b+1)+1 \notag
+    \end{align}
+    Since $3b+2, 5b+1 \in \mathbb{Z}$, $3x+1$ is even and $5x-2$ is odd.\\
+    Since both implications of the biconditional are met when $x$ is odd, and neither implication is met when $x$ is even, the biconditional is satisfied. \hfill $\Box$.
+
+\newpage
+
+
+\section*{Problem 6}
+
+    \textbf{Result:} For any integer $n$, $5 | n^2$ if and only if $ 5 | n$\\.
+    \\
+    \textbf{Proof:} We must prove both implications, so we begin by proving that for any integer $n$, $5 | n^2$ if $ 5 | n$. \\
+    \textit{Left to Right:} We will prove this implication using contrapositive.\\
+    Let $n \in \mathbb{Z}$, and assume that $5 \nmid n $. By definition, there does not exist an integer $a$ such that $n = 5a$, or in other words, $n \neq 5a$.
+    \begin{align}
+        n \neq& \ 5a \notag \\
+        n^2 \neq& \ (5a)^2 \notag \\
+        n^2 \neq& \ 25a^2 \notag \\
+        n^2 \neq& \ 5(5a^2) \notag
+    \end{align}
+    Since $n^2$ cannot be written as the product of two integers, $5a^2$ and $5$, $5 \nmid n^2 $. \\
+    \textit{Right to left:} We will prove this implication directly.\\
+    Let $n \in \mathbb{Z}$, and assume that $5 | n$. By definition, there exists an integer $a$ such that $n = 5a$. Therefore,
+    \begin{align}
+        n =& 5a \notag\\
+        n^2 =& (5a)^2 \notag\\
+        n^2 =& 25a^2 \notag\\
+        n^2 =& 5(5a^2)
+    \end{align}
+    Since $n^2$ can be expressed as the product of two integers, $5$ and $5a^2$, $5 | n^2$
+    \hfill $\Box$
+
+\newpage
+
+
+
+\section*{Problem 7}
+
+    \textbf{Result:} If $a, b \in \mathbb{R}$, then $ab \leq \sqrt{a^2}\sqrt{b^2}$.
+    \\
+    \textbf{Proof:} Let $a, b \in \mathbb{R}$. Therefore, 
+    \begin{align}
+        ab \leq& \ \sqrt{a^2}\sqrt{b^2} \notag \\
+        ab \leq& \ (a)(b) \notag \\
+        ab \leq& \ ab
+    \end{align}
+    The proof has been satisfied. It should be noted that for the cases where $a, b \leq 0$, we square the values before taking the square root, meaning the expression is still valid for all $a, b, \in \mathbb{R}$.
+    \hfill $\Box$
+
+\newpage
+
+
+
+\section*{Problem 8}
+
+    \textbf{Result:} Let $a, b \in \mathbb{R}$. If $a>0$ and $b>0$, then $\frac{a}{b}+\frac{b}{a} \geq 2$.
+    \\
+    \textbf{Proof:} Let $a, b \in \mathbb{R}$. Therefore, 
+    \begin{align}
+        \frac{a}{b}+\frac{b}{a} \geq& \ 2 \notag \\
+        a+\frac{b^2}{a} \geq& \ 2b \notag \\
+        a^2+b^2 \geq& \ 2ab \notag \\
+        a^2 + b^2 -2ab \geq& \ 0 \notag
+    \end{align}
+    Now recognize that this inequality is very similar to that outlined in the Law of Cosines, which is pictured in inequality (5).
+    \begin{align}
+         a^2 + b^2 -2ab\cos(\theta) = c^2 
+    \end{align}
+    Observe that when the angle, $\theta$, is zero degrees, then the opposite side (length $c$) has a length of zero units. Also observe that $cos(0) = 1$. Therefore,
+    \begin{align}
+        a^2 + b^2 -2ab\cos(\theta) \geq c^2 \notag \\
+        a^2 + b^2 -2ab\cos(0) \geq 0 \notag \\
+        a^2 + b^2 -2ab \geq 0 \notag \\
+        a^2 + b^2 \geq 2ab \notag
+    \end{align}
+    The proof has been completed.
+    \hfill $\Box$
+
+\newpage
+\end{document}

@@ -1,0 +1,232 @@
+\documentclass[11pt]{article}
+\usepackage{graphics,graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=1.cm,bottom=2cm]{geometry}
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+
+% HEADER %
+\begin{document}
+\title{MATH 2800-01: Mathematics Major Seminar}
+\line
+\leftright{Assignment \# 03 ~~~~ 29 Sept 2025}{David Haberkorn}
+% END HEADER %
+
+
+\section*{Problem 1}
+
+ \textbf{(a)}: $\emptyset \in \emptyset$ is a false statement. The empty set, by definition, contains no elements, so it can not contain itself. \\
+ \textbf{(b)}: $\emptyset \in \{\emptyset\}$ is a true statement. \\
+ \textbf{(c)}: $ \{1, 3\} = \{3, 1\}$ is a true statement. \\
+ \textbf{(d)}: $ \emptyset = \{\emptyset\} $ is a false statement. The set containing the empty set, and the empty set, are different. One contains no elements, the other contains one element, namely the empty set. \\
+ \textbf{(e)}: $ \emptyset \subset \{\emptyset\} $ is a true statement. \\
+ \textbf{(f)}: $ 1 \subseteq \{1\} $ is a false statement. '1' is not a set, so it cannot be a subset of $\{1\}$.\\
+
+
+\newpage
+
+
+\section*{Problem 2}
+
+\textbf{Statement P: $\sqrt{2}$ is rational.}\\
+The square root of two is rational. This statement is false.\\
+\textbf{Statement Q: $\frac{2}{3}$ is rational.}\\
+The quantity 'two divided by three' is rational. This statement is true. \\
+\textbf{Statement R: $\sqrt{3}$ is rational.}\\
+The square root of 3 is rational. This statement is false. \\
+
+
+\newpage
+
+
+\section*{Problem 3}
+
+\textbf{Question}\\
+The instructor of a computer science class announces to her class that there will be a well-known speaker on campus later that day. Four students in the class are Alice, Ben, Cindy and Don. Ben says that he’ll attend the lecture if Alice does. Cindy says that she’ll attend the talk if Ben does. Don says that he will go to the lecture if Cindy does. That afternoon exactly two of the four students attend the talk.\\
+Which two students went to the lecture?\\
+
+\textbf{Solution}\\
+Don and Cindy. If either Alice or Ben goes, then Cindy and Don must both go, making the total number in attendance at least 3. If neither Alice nor Ben go, then Cindy has the option to choose. If she goes, then Don also goes. When Cindy goes, Don also goes, and there are exactly two attendees. //\\
+
+
+
+
+\newpage
+
+
+\section*{Problem 4}
+
+\textbf{Problem}\\
+A college student makes the following statement: "If I receive an A in both Calculus I and Discrete Mathematics this semester, then I’ll take either Calculus II or Computer Programming this summer." For each of the following, determine whether the statement is true or false.\\
+
+\textbf{Logic}\\
+$P$ = Receiving an A in both Calculus I \textbf{and} Discrete Mathematics this semester.\\
+$Q$ = Take either Calculus II \textbf{or} Computer Programming this summer.\\
+
+\textbf{Solutions}\\
+\textbf{(a)}
+\begin{itemize}
+    \item \textbf{Case:} \textit{The student doesn’t get an A in Calculus I but decides to take Calculus II this summer anyway.}
+    \item \textbf{Truth Value:}  True. "If false, then true" implies true.
+\end{itemize}
+
+\textbf{(b)}
+\begin{itemize}
+    \item \textbf{Case:} \textit{The student gets an A in both Calculus I and Discrete Mathematics but decides not to take any class this summer.}
+    \item \textbf{Truth Value:}  False. "If true, then false" implies false.
+\end{itemize}
+
+\textbf{(c)}
+\begin{itemize}
+    \item \textbf{Case:} \textit{The student does not get an A in Calculus I and decides not to take Calculus II but takes Computer Programming this summer.}
+    \item \textbf{Truth Value:}  True. "If false, then true" implies true.
+\end{itemize}
+
+\textbf{(d)}
+\begin{itemize}
+    \item \textbf{Case:} \textit{The student gets an A in both Calculus I and Discrete Mathematics and decides to take both Calculus II and Computer Programming this summer.}
+    \item \textbf{Truth Value:}  True. "If true, then true" implies true.
+\end{itemize}
+
+\textbf{(e)}
+\begin{itemize}
+    \item \textbf{Case:} \textit{The student gets an A in neither Calculus I nor Discrete Mathematics and takes neither Calculus II nor Computer Programming this summer.}
+    \item \textbf{Truth Value:}  True. "If false, then false" implies true.
+\end{itemize}
+
+\newpage
+
+
+\section*{Problem 5}
+
+\textbf{Statements}\\
+$P(x) : |x-3| < 1$ over the domain $\mathbb{R}$.\\
+$Q(x) : x \in (2, 4)$ over the domain $\mathbb{R}$.\\
+
+\textbf{Biconditional of P and Q:}\\
+1) $|x-3| < 1$ and $ 2 \leq x \leq 4 $ \\
+2) The absolute value of the quantity $x-3$ is less than 1 if and only if the value of x is at least 2 and at most 4.
+
+
+\newpage
+
+
+\section*{Problem 6}
+
+\begin{displaymath}
+\begin{array}{|c c c | c | c | c | c |c|}
+P & Q & R & P \Rightarrow Q & Q \Rightarrow R & P \Rightarrow R & (P \Rightarrow Q) \land (Q \Rightarrow R) & ((P \Rightarrow Q) \land (Q \Rightarrow R)) \Rightarrow (P \Rightarrow R)\\ 
+\hline
+T & T & T & T & T & T & T & T\\
+T & T & F & T & F & F & F & T\\
+T & F & T & F & T & T & F & T\\
+T & F & F & F & T & F & F & T\\
+F & T & T & T & T & T & T & T\\
+F & T & F & T & F & T & F & T\\
+F & F & T & T & T & T & T & T\\
+F & F & F & T & T & T & T & T\\
+
+\end{array}
+\end{displaymath}
+According to the truth table for the expression $((P \Rightarrow Q) \land (Q \Rightarrow R)) \Rightarrow (P \Rightarrow R)$, that expression is a tautology.\\
+In other words, the expression \text{"The  conjunction of 'P implies Q' and 'Q implies R' implies that 'P implies R'"} is a tautology.
+
+\newpage
+
+
+\section*{Problem 7}
+For this problem, we can set up a table for inputs and outputs.\\
+P(x) is true when the quantity $7x+4$ is odd, and Q(y) is true when $5y+9$ is odd.
+\begin{displaymath}
+\begin{array}{c|c|c}
+    Inputs & P(x) & Q(y)\\
+    \hline
+    1 & T & F \\
+    2 & F & T \\
+    3 & T & F \\
+    4 & F & T \\
+    5 & T & F \\
+    6 & F & T \\
+    7 & T & F \\
+\end{array}
+\end{displaymath}
+This follows the pattern listed below.
+\begin{itemize}
+    \item $P(x)$ is true when x is odd.
+    \item $Q(y)$ is true when y is even.
+\end{itemize}
+From here, we get 4 cases, which we can evaluate the statement $P(x) \Rightarrow Q(y)$ with.
+\begin{itemize}
+    \item $P(x)$ and $Q(y)$ are both odd, meaning $P(x)$ is true and $Q(y)$ is false.
+    \item $P(x)$ and $Q(y)$ are both even, meaning $P(x)$ is false and $Q(y)$ is true.
+    \item $P(x)$ is odd, while $Q(y)$ is even, meaning $P(x)$ is true and $Q(y)$ is true.
+    \item $P(x)$ is even, while $Q(y)$ is odd, meaning $P(x)$ is false and $Q(y)$ is false.
+\end{itemize}
+Using another truth table, we can find $P(x) \Rightarrow Q(y)$
+\begin{displaymath}
+\begin{array}{c|c|c}
+    P(x) & Q(y) & P(x) \Rightarrow Q(y)\\
+    \hline
+    T & T & T\\
+    T & F & F\\
+    F & T & T\\
+    F & F & T\\
+\end{array}
+\end{displaymath}
+We are told that the set $S$ is the set of ordered pairs of $(P(x), Q(y))$ where $P(x) \Rightarrow Q(y)$ is false. So, the only ordered pairs that are valid are where $P(x)$ is odd and $Q(y)$ is odd.\\
+Since there are 3 odd numbers in the set $A$ and four odd numbers in the set $B$, the cardinality of S is $|S| = 3 \cdot 4 = 12$ //\\
+
+
+\newpage
+
+
+\section*{Problem 8}
+Let 
+\begin{itemize}
+    \item $X : (P \wedge Q) \implies R$
+    \item $Y : P \wedge (\sim R) \implies (\sim Q)$
+    \item $Z : Q \wedge (\sim R) \implies (\sim P)$
+\end{itemize}
+To show that $X \equiv Y$ and $X \equiv Z$, we will use a truth table.
+\begin{displaymath}
+\begin{array}{c c c | c | c | c }
+    P & Q & R & X & Y & Z\\
+    \hline
+    T & T & T & T & T & T\\
+    T & T & F & F & F & F\\
+    T & F & T & F & F & F\\
+    T & F & F & T & T & T\\
+    F & T & T & F & F & F\\
+    F & T & F & T & T & T\\
+    F & F & T & F & F & F\\
+    F & F & F & T & T & T\\
+\end{array}
+\end{displaymath}
+Since the values for $X$, $Y$ and $Z$ are all the same, we know that $X \equiv Y$ and $X \equiv Z$. \\
+\\
+\line
+\\
+For the following statement utilizing the function $f(x)$ and a real number x,\\
+\begin{displaymath}
+    \text{If }f'(x) = 3x^2 - 2x \text{ and } f(0) = 4\text{, then }f(x) = x^3 - x^2 +4\text{,}
+\end{displaymath}
+the implication can be restated as 
+\begin{displaymath}
+    \text{If }f'(x) = 3x^2 - 2x \text{ and } f(x) \neq x^3 - x^2 +4 \text{, then } f(0) \neq 4 \text{,}
+\end{displaymath}
+or it can be restated as
+\begin{displaymath}
+    \text{If }f(0) = 4 \text{ and } f(x) \neq x^3 - x^2 +4 \text{, then } f'(x) \neq 3x^2 - 2x \text{.}
+\end{displaymath}
+\end{document}

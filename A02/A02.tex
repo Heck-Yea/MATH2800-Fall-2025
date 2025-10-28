@@ -1,0 +1,157 @@
+\documentclass[11pt]{article}
+\usepackage{graphics,graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=1.cm,bottom=2cm]{geometry}
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+
+% HEADER %
+\begin{document}
+\title{MATH 2800-01: Mathematics Major Seminar}
+\line
+\leftright{Assignment \# 02 ~~~~ 23 Sept 2025}{David Haberkorn}
+% END HEADER %
+
+
+\section*{Problem 1}
+
+From the sets 
+\begin{itemize}
+    \item $A = \{n \in \mathbb{Z} : |n| < 2\}$
+    \item $B = \{n \in \mathbb{Z} : n^3 = n\}$
+    \item $C = \{n \in \mathbb{Z} : n^2 \leq n\}$
+    \item $D = \{n \in \mathbb{Z} : n^2 \leq 1\}$ and 
+    \item $E = \{-1, 0, 1\}$
+\end{itemize}
+the sets that are equivalent are $ A = B = D = E $. \\
+$A, B, D$ and $E$ all describe the integer set $\{-1, 0, 1\}$, while $C$ describes the integer set $\{0, 1\}$.
+
+
+\newpage
+
+
+\section*{Problem 2}
+
+\textbf{(a)} \\
+    \textbf{ Statement:} If $ \{1\} \in \mathcal{P}(A)$, then $ 1 \in A $ but $ \{1\} \notin A $. \\
+    \textbf{Validity:} The statement is false. The set A could contain both the elements $ 1 $ and $ \{1\} $. \\
+\textbf{(b)} \\
+    \textbf{Statement:} If $A$, $B$ and $C$ are sets such that $ A \subset    \mathcal{P}(B) \subset C $ and $ |A| = 2 $, then $ |C| $ can be 5 but $|C|$ cannot be 4. \\
+    \textbf{Validity:} The statement is false. $ |C| $ can be 5 when $ A = \{\{1\}, \{2\}\}$, $ B = \{1,2\}$, $ \mathcal{P}(B) = \{ \emptyset, \{1\}, \{2\}, \{1,2\} \}$, and $ C = \{ \emptyset, \{1\}, \{2\}, \{1,2\}, 10\}.$ $ |C| $ can be 4 when $ A = \{\{1\}, \{2\}\}$, $ B = \{1,2\}$, $ \mathcal{P}(B) = \{ \emptyset, \{1\}, \{2\}, \{1,2\} \}$, and $ C = B $, which is the same as $ B \subset C$. \\
+\textbf{(c)} \\
+    \textbf{Statement:} If a set B has one more element than set A, then $ \mathcal{P}(B) $ has at least two more elements than $ \mathcal{P}(A)$.\\
+    \textbf{Validity:} The statement is false. Using the equation $ |\mathcal{P}(S)| = 2^n$ where S is a set and $ n = |S| $, we find that when $|A| = 1$ and $|B| = 0$, then $|\mathcal{P}(A)| = 2^{(1)} = 2$ and $|\mathcal{P}(B)| = 2^{(0)} = 1$, which disproves the statement.
+
+
+\newpage
+
+
+\section*{Problem 3}
+
+
+\textbf{Solution:} To begin, assume each set is empty.\\
+To satisfy requirement (a), we must add 1 to $A$ and $B$. We cannot add 1 to $C$. \textbf{Requirement (a) has been satisfied.}\\
+To satisfy requirement (b), we must add 2 to $A$ and $C$. We cannot add 2 to $B$. \textbf{Requirement (b) has been satisfied.}\\
+To satisfy requirement (c), 3 must be in $A$. In addition, 3 must be in either $B$ or $C$, not both.\\
+Currently, by necessity, $A = \{1, 2, 3\}$, $B = \{1\}$, and $C = \{2\}$. To satisfy $|A| = |B| = |C|$, we need to add elements to $B$ and $C$.\\
+The cardinality of each set must be equal to at least 3, since $A$ must contain 1, 2 and 3.\\
+To satisfy (d), we add 4 to sets $B$ and $C$. \textbf{Requirement (d) has been satisfied.}\\
+3 must be added to either $B$ or $C$ to satify (c), resulting in two cases.\\
+\textbf{Case 1: 3 is added to $B$:} we now have 3 elements in $A$ and $B$, and only 2 in $C$. The only element able to be added to $C$ is 5, as adding any other element would contradict one of the previous requirements. However, when adding 5 to $C$, we find that requirement (f) is now contradicted. Therefore we must try the other case.\\
+\textbf{Case 2: 3 is added to $C$:} We now have 3 elements in $A$ and $C$, with only 2 in $B$. The only element able to be added to $B$ is 5 (satisfying requirement (e)), as adding a different element would contradict one of the previous requirements. Checking for requirement (f), we now find that the sum of the elements of $B = 10$ and the sum of the elements of $C =9$, fulfilling requirement (f).\\
+\textbf{Requirements (c), (e), and (f) have been satisfied, and the cardinality of each set is equal to 3.}\\
+Therefore, $A = \{1, 2, 3\}, B = \{1, 4, 5\},$ and $C = \{2, 3, 4\}$.
+
+
+\newpage
+
+
+\section*{Problem 4}
+
+If $ A = \{a, b, c, d, e, f, g\}$, then $S_1 = \{ \{a, c, e, g\}, \{b, f\}, \{d\} \}$ and $S_3 = \{A\}$ are partitions of A.
+\begin{itemize}
+    \item $S_2$ does not include the element $g$.
+    \item $S_4$ includes the empty set, and a partition must be made of non-empty sets.
+    \item $S_5$ includes the element $b$ twice. In order to be a partition, the intersection of any two elements of the partition set must be equal to the empty set.
+\end{itemize}
+
+\newpage
+
+
+\section*{Problem 5}
+
+Let $A = \{1, 2, \cdots, 12\}$. A partition that satisfies the requirements listed below could be
+$$ S = \{ \{1, 2\}, \{3, 4\}, \{5, 6\}, \{7, 8\}, \{9, 10, 11, 12\}  \} .$$
+This satisfies the following requirements:
+\begin{itemize}
+    \item $|S| = 5$
+    \item $ \left| \mathop{\bigcup}\limits_{X \in T} X \right| = 10 $ where $T \subset S$ and $T = \{\{3, 4\}, \{5, 6\}, \{7, 8\}, \{9, 10, 11, 12\}\}$.\\
+    \item None of the subsets within $S$ have a cardinality of 3.\\
+\end{itemize}
+
+
+\newpage
+
+
+\section*{Problem 6}
+
+For a real number $r$, let $A_r = \{r, r+1\}$. Let $S = \{x \in \mathbb{R} : x^2 + 2x - 1 = 0\}$. \\
+\textbf{(a)}\\
+When $s, t \in S$ and $s < t$, then 
+\begin{align*}
+    B =& A_s \times A_t \\
+    =& \{-1 - \sqrt{2}, -\sqrt{2}\} \times \{1 - \sqrt{2}, 2 -\sqrt{2}\} \\
+    =& \{  (-1-\sqrt{2}, 1-\sqrt{2}), (-1-\sqrt{2},2 -\sqrt{2}), (-\sqrt{2}, 1 - \sqrt{2}), (-\sqrt{2}, 2 -\sqrt{2})  \}
+\end{align*}
+\textbf{(b)}\\
+Let $C = \{(a, b) \in B : ab\}$. The sum of the elements of C is:
+\begin{align*}
+    \sum_{x \in C} x &= \sum_{(a,b) \in B} a \cdot b \\
+    &= (-1-\sqrt{2}) \cdot (1-\sqrt{2}) + (-1-\sqrt{2}) \cdot (2-\sqrt{2}) +\\ 
+    &\qquad  (-\sqrt{2}) \cdot (1-\sqrt{2}) + (-\sqrt{2}) \cdot (2-\sqrt{2})\\
+    &= (1) + (-\sqrt{2}) + (-\sqrt{2}+2) + (-2\sqrt{2}+2)\\
+    &= 5-4\sqrt{2}
+\end{align*}
+
+
+\newpage
+
+
+\section*{Problem 7}
+Let $ A = \{x \in \mathbb{R}: |x-1| \leq 2\}$, $ B = \{x \in \mathbb{R}: |x| \geq 1\}$, and $ C = \{x \in \mathbb{R}: |x+2| \leq 3\}$.\\
+\textbf{(a)}
+\begin{align*}
+    A &= \{x \in \mathbb{R} : |x-1| \le 2\} \\
+    |x-1| &\le 2 \\
+    -2 &\le x-1 \le 2 \\
+    -1 &\le x \le 3 \\
+    \boxed{A = [-1, 3]}\\
+    B &= \{x \in \mathbb{R} : |x| \geq 1\} \\
+    x &< -1 \text{ or } x > 1\\
+    \boxed{B = (- \infty , -1] \cup [1, \infty )}\\
+    C &= \{x \in \mathbb{R} : |x+2| \leq 3\} \\
+    |x+2| &\le 3\\
+    -3 &\le x+2 \le 3 \\
+    -5 &\le x \le 1 \\
+    \boxed{C = [-5, 1]}\\
+\end{align*}
+\textbf{(b)}
+\begin{itemize}
+    \item $A \cup B = [-1, 3] \cup ( (- \infty , -1] \cup [1, \infty ) ) = \mathbb{R}$
+    \item $A \cap B = [-1, 3] \cap ( (- \infty , -1] \cup [1, \infty ) ) = -1 \cup [1, 3]$
+    \item $B \cap C = ( (- \infty , -1] \cup [1, \infty ) ) \cap [-5, 1] = [-5, -1] \cup 1$
+    \item $B - C = ( (- \infty , -1] \cup [1, \infty ) ) - [-5, 1] = (- \infty , -5] \cup [1, \infty )$
+\end{itemize}
+
+\end{document}
