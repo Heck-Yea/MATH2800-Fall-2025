@@ -1,8 +1,8 @@
-PWD c:/Users/djhab/OneDrive - University of Wyoming/Classes/Fall 2025/MATH2800 Math Major Seminar/A05
+PWD c:/Users/djhab/OneDrive - University of Wyoming/Classes/Fall 2025/MATH2800 Math Major Seminar/MATH2800-Fall-2025/A05
 INPUT c:/texlive/2025/texmf.cnf
 INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/djhab/OneDrive - University of Wyoming/Classes/Fall 2025/MATH2800 Math Major Seminar/A05/A05.tex
+INPUT c:/Users/djhab/OneDrive - University of Wyoming/Classes/Fall 2025/MATH2800 Math Major Seminar/MATH2800-Fall-2025/A05/A05.tex
 OUTPUT A05.log
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
