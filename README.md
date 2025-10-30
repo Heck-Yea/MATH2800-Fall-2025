@@ -1,5 +1,7 @@
 # Overview
 
+AI WAS NOT USED IN ANY PORTION OF THIS REPOSITORY
+
 This repository contains all assignments from MATH2800 - Math Major Seminar.
 
 Nearly all of the work here is in LaTeX.
