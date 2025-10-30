@@ -48,8 +48,8 @@
     \end{align}
     In order for the product of the two terms above to equal zero, at least one of $(c-d)$ or $(c^4 + c^3d + c^2d^2 + cd^3 + d^4 + 2)$ must be equal to zero. For the first case, we get
     \begin{align}
-        c-d =& 0 \notag \\
-        c =& d . \notag
+        c-d =& \ 0 \notag \\
+        c =& \ d . \notag
     \end{align}
     For the second case, we get
     \begin{align}
@@ -58,12 +58,13 @@
     \end{align}
     Notice that since $c,d \in (1,2)$, they are both positive numbers. Also notice that the sum of powers and products of positive numbers must also be a positive number. Since the sum totaling to $-2$ is not possible, the only real values are from before, where we found $c=d$.\\
     However, this is a contradiction since we stated that $c$ and $d$ are unique. Therefore, the equation $x^5 + 2x - 5 = 0$ has only one unique real number solution between $x=1$ and $x=2$. \hfill $\Box$
+
 \newpage
 
 \section*{Problem 2}
 
     \textbf{Result:} For every positive integer $n \geq 2$, the equation $x^n + (x+1)^n = (x+2)^n$ is false. \\
-    \textbf{Disproof (by counterexample):} Let $x = 3$ and $n = 2$. Plugging these values into the anove equation, we arrive at
+    \textbf{Disproof (by counterexample):} Let $x = 3$ and $n = 2$. Plugging these values into the above equation, we arrive at
     \begin{align}
         x^n + (x+1)^n = (x+2)^n \notag\\
         3^2 + (3+1)^2 = (3+2)^2 \notag\\
@@ -77,55 +78,49 @@
 
 \section*{Problem 3}
 
-    \textbf{Result:} If $a$ and $b$ are two distinct real numbers, then either $\frac{a+b}{2} > a$ or $\frac{a+b}{2}>b$.\\
-    \\
-    \textbf{Proof Strategy:} We will use constrapositive. We will work to show that if $\frac{a+b}{2} \leq a$ and $\frac{a+b}{2} \leq b$, then $a$ and $b$ are not distinct, meaning $a=b$. We will work through two cases, then combine the two cases into one result. \hfill $\blacklozenge$\\
-    \\
-    \textbf{Proof, by contrapositive:} There are two cases we must prove. Let case 1 be $\frac{a+b}{2} \leq a$, and let case 2 be $\frac{a+b}{2} \leq b$, for any two distinct real numbers $a$ and $b$.
-
-    \textit{Case 1}: Let $\frac{a+b}{2} \leq a$, for $a, b \in \mathbb{R}$. Therefore, 
+    \textbf{Result:} If $a \geq 2$ and $b$ are integers, then $a \nmid b$ or $a \nmid b + 1$. \\
+    \textbf{Proof, by contradiction:} Assume, to the contrary, that both $a \mid b$ and $a \mid b + 1$, for some $a \geq 2, b, \in \mathbb{Z}$. This implies that there are two integers $s$ and $t$ such that 
     \begin{align}
-        \frac{a+b}{2} & \le a \notag \\
-        a+b & \le 2a \notag \\
-        b & \le a \label{ineq1}
+        b = \ as \notag \\
+        b + 1 = \ at \notag
     \end{align}
-    Inequality (1) is our first result.
-
-     \textit{Case 2}: Let $\frac{a+b}{2} \leq b$, for $a, b \in \mathbb{R}$. Therefore, 
+    Through algebra, we get
     \begin{align}
-        \frac{a+b}{2} & \le b \notag \\
-        a+b & \le 2b \notag \\
-        a & \le b \label{ineq2}
+        b + 1 = \ at \notag \\
+        b = \ at + 1 \notag \\
+        as = \ at + 1 \notag \\
+        1 = a(s-t)
     \end{align}
-    Inequality (2) is our second result.
-    \textit{Combining cases:} Combining results (1) and (2), we get the dual inequalities 
-    $$
-        b \leq a \qquad a \leq b
-    $$
-    For both to be true, then $a$ must equal $b$, which is the result we have been attempting to prove. \hfill $\Box$
+   Notice that according to equation $(1)$, and since $(s-t) \in \mathbb{Z}$, we get that $a$ divides 1. This implies that $a = \pm 1$, which is a contradiction since we assumed that $a \geq 2$. \\
+   Therefore, the result must be true. \hfill $\Box$
 
 \newpage
 
 
 \section*{Problem 4}
 
-    \textbf{Result:} If $xy$ and $x+y$ are even and $x, y \in \mathbb{Z}$, then both $x$ and $y$ are even.\\
-    \\
-    \textbf{Proof Strategy:} We will use constrapositive. We will work to show that if $x$ or $y$ is odd, then either $xy$ or $x+y$ is odd. \hfill $\blacklozenge$\\
-    \\
-    \textbf{Proof, by contrapositive:} Let $x, y \in \mathbb{Z}$, and let $x$ or $y$ be odd. By definition, there exists integers $m$ and $n$ such that $x=2m+1$ and $y=2n+1$. Without loss of generality, we assume that $x$ is odd.\\
-    We work to show that $xy$ or $x+y$ is odd when $x$ is odd. $y$ can be even or odd, so we will prove two cases.\\
-    \textit{Case 1:} Let $y$ be odd. By definition, $y = 2k+1$ for some $k \in \mathbb{Z}$. Therefore, 
+    \textbf{Result:} $\sqrt{3}$ is irrational. \\
+
+    \textbf{Proof, by contradiciton:} Assume, to the contrary, that $\sqrt{3}$ is rational. By definition, $\sqrt{3}$ can be expressed as
     \begin{align}
-        xy = (2m+1)(2k+1) = 4mk+2m+2k+1 = 2(2mk+m+k)+1 \notag
+        \sqrt{3} = \frac{m}{n} \notag
     \end{align}
-    By definition, since $2mk+m+k \in \mathbb{Z}$, $xy$ is odd. \\
-    \textit{Case 2:} Let $y$ be even. By definition, $y = 2l$ for some $l \in \mathbb{Z}$. Therefore, 
+    for some integers $m, n$ where $n$ is nonzero and the fraction is in its most simplified form. \\
+    Through algebra, we get
     \begin{align}
-        x+y = (2m+1)+(2l) = 2m+2l+1= 2(m+l)+1 \notag
+        \sqrt{3} =& \ \frac{m}{n} \notag \\
+        3 =& \ \frac{m^2}{n^2} \notag \\
+        3n^2 =& \ m^2 
     \end{align}
-    By definition, since $m+l \in \mathbb{Z}$, $x+y$ is odd.\\
-    Both cases have been proven. \hfill $\Box$
+    The implication of equation $(2)$ is that 3 divides $m^2$, or in other words, $3 \mid m^2$. From the lemma provided, we know that $3 \mid m^2$ if and only if $3 \mid m$. Therefore, we know that $m = 3p$ for some integer $p$. \\
+    Again, through algebra, we find
+    \begin{align}
+        3n^2 =& \ (3p)^2 \notag \\
+        3n^2 =& \  9p^2 \notag \\
+        n^2 =& \ 3p^2 \notag
+    \end{align}
+    Without loss of generality, we find that $n = 3q$ for some integer $q$.\\
+    However, we have arrived upon a contradiction, since we said that the original fraction $\frac{m}{n} = \frac{3p}{3q}$ is in its most simplified form. Therefore, the original statement must be true. \hfill $\Box$
 
 \newpage
 
@@ -133,53 +128,55 @@
 
 \section*{Problem 5}
 
-    \textbf{Result:} For any integer $x$, $3x+1$ is even if and only if $5x-2$ is odd.\\
-    \\
-    \textbf{Proof Strategy:} We will use two cases, one where $x$ is even, and one where $x$ is odd. We will then prove the biconditional for both cases. \hfill $\blacklozenge$\\
-    \\
-    \textbf{Proof:} Let $x$ be an integer. We will prove the biconditional with two cases. \\
-    \textit{Case 1:} Let $x$ be an even integer. By definition, $x = 2a$ for some integer $a$. Therefore,
+    \textbf{Result:} There exist no positive integers $m, n$ such that $m^2 - n^2 = 1$.\\
+    
+    \textbf{Proof, by contradiction:} Assume, to the contrary, that there do exist two integers $m, n$ such that $m^2 - n^2 = 1$. Through algebra, we find 
     \begin{align}
-        3x+1 = 3(2a)+1 = 6a+1 = 2(3a)+1 \notag \\
-        5x-2 = 5(2a)-2 = 10a-2 = 2(5a) \notag
+        m^2 - n^2 &= 1 \notag \\
+        (m + n)(m - n) &= 1 \notag
     \end{align}
-    By definition, since $3a, 5a \in \mathbb{Z}$, then $3x+1$ is odd and $5x-2$ is even.\\
-    Since neither $3x+1$ is even, nor $5x-2$ is odd when $x$ is even, we can mark this case irrelevant.\\
-    \textit{Case 2:} Let $x$ be an odd integer. By definition, $x = 2b+1$ for some integer $b$. Therefore,
+    Notice that we have arrived at a product of two expressions, the product of which is 1. The only way for this to be true (over the domain $\mathbb{Z}$) is if both $(m + n)$ or $(m - n)$ are equal to 1 or -1. For both cases, we can set them equal to each other, arriving at
     \begin{align}
-        3x+1 = 3(2b+1)+1 = 6b+3+1 = 6b+4 = 2(3b+2) \notag \\
-        5x-2 = 5(2b+1)-2 = 10b+5-2 = 10b+2+1 = 2(5b+1)+1 \notag
+        (m + n) = (m - n) \notag \\
+        m + n = m - n \notag \\
+        m = m - 2n \notag \\
+        0 = -2n \notag \\
+        0 = n \notag
     \end{align}
-    Since $3b+2, 5b+1 \in \mathbb{Z}$, $3x+1$ is even and $5x-2$ is odd.\\
-    Since both implications of the biconditional are met when $x$ is odd, and neither implication is met when $x$ is even, the biconditional is satisfied. \hfill $\Box$.
+    This is a contradiction because we assumed both $m$ and $n$ were positive. Therefore, the statement has been proven. \hfill $\Box$
 
 \newpage
 
 
 \section*{Problem 6}
 
-    \textbf{Result:} For any integer $n$, $5 | n^2$ if and only if $ 5 | n$\\.
-    \\
-    \textbf{Proof:} We must prove both implications, so we begin by proving that for any integer $n$, $5 | n^2$ if $ 5 | n$. \\
-    \textit{Left to Right:} We will prove this implication using contrapositive.\\
-    Let $n \in \mathbb{Z}$, and assume that $5 \nmid n $. By definition, there does not exist an integer $a$ such that $n = 5a$, or in other words, $n \neq 5a$.
+    \textbf{Result:} For a real number $x$, if $ x - \frac{x}{2} > 1$, then $x > 2$. \\
+    
+    \textbf{Proof (direct):} Let $x$ be a real number. From the statement above and through algebra, we get 
     \begin{align}
-        n \neq& \ 5a \notag \\
-        n^2 \neq& \ (5a)^2 \notag \\
-        n^2 \neq& \ 25a^2 \notag \\
-        n^2 \neq& \ 5(5a^2) \notag
-    \end{align}
-    Since $n^2$ cannot be written as the product of two integers, $5a^2$ and $5$, $5 \nmid n^2 $. \\
-    \textit{Right to left:} We will prove this implication directly.\\
-    Let $n \in \mathbb{Z}$, and assume that $5 | n$. By definition, there exists an integer $a$ such that $n = 5a$. Therefore,
+        x - \frac{2}{x} > 1 \notag \\
+        x^2 - 2 > x \notag \\
+        x^2 -x -2 > 0 \notag \\
+        (x - 2)(x + 1) > 0 \notag 
+    \end{align} 
+    Notice that of the two terms of the product, $(x+1)$ is always positive for $x > 0$. That leaves us with
     \begin{align}
-        n =& 5a \notag\\
-        n^2 =& (5a)^2 \notag\\
-        n^2 =& 25a^2 \notag\\
-        n^2 =& 5(5a^2)
+        x - 2 > 0
     \end{align}
-    Since $n^2$ can be expressed as the product of two integers, $5$ and $5a^2$, $5 | n^2$
-    \hfill $\Box$
+    Hence, the proof is complete. \hfill $\Box$ \\
+
+    \textbf{Proof, by contrapositive:} Let $x$ be a real number. We will work to show that if $x \leq 2$, then $ x - \frac{x}{2} \leq 1$.
+    \begin{align}
+        x \leq 2 \notag \\
+        x - 2 \leq 0 \notag \\
+        (x-2)(x+1) \leq 0 \notag \\
+        x^2 - x - 2 \leq 0 \notag \\
+        x^2 - 2 \leq x \notag \\
+        x - \frac{2}{x} \leq 1 \notag
+    \end{align}
+    The result has been proven. \hfill $\Box$ \\
+
+    \textbf{Proof, by contradiction:} Let $x$ be a real number. Suppose, to the contrary, that if if $ x - \frac{x}{2} > 1$, then $x \leq 2$. However, by the contrapositive argument given above, when $x \leq 2$,  $ x - \frac{x}{2} \leq 1$, which is a contradiction. Therefore, the result has been proven. \hfill $\Box$
 
 \newpage
 
@@ -187,45 +184,100 @@
 
 \section*{Problem 7}
 
-    \textbf{Result:} If $a, b \in \mathbb{R}$, then $ab \leq \sqrt{a^2}\sqrt{b^2}$.
-    \\
-    \textbf{Proof:} Let $a, b \in \mathbb{R}$. Therefore, 
+    \textbf{Result:} The equation $4x - \cos^2(x) = 10$ has a real number solution in the interval $[0,4]$. \\
+    
+    \textbf{Proof:} Let $f$ be a function defined as $f(x) = 4x - \cos^2(x)$, which is defined over all $x \in \mathbb{R}$. Notice that the function is continuous over $\mathbb{R}$, since a combination of a linear and trigonometric term result in a continuous function. \\
+    Evaluating at each endpoint of the interval in question, we get
     \begin{align}
-        ab \leq& \ \sqrt{a^2}\sqrt{b^2} \notag \\
-        ab \leq& \ (a)(b) \notag \\
-        ab \leq& \ ab
+        f(x) = 4x - \cos^2(x) \notag \\
+        f(0) = 4(0) - \cos^2(0) \notag \\
+        f(0) = -1 \notag \\
+        \notag \\
+        f(4) = 4(4) - \cos^2(4) \notag \\
+        f(4) = 16 - \cos^2(4) \notag \\
+        f(4) \approx 15 \notag
     \end{align}
-    The proof has been satisfied. It should be noted that for the cases where $a, b \leq 0$, we square the values before taking the square root, meaning the expression is still valid for all $a, b, \in \mathbb{R}$.
-    \hfill $\Box$
-
+    Notice that $-1 \leq 0 \leq 15$. \\
+    By the intermediate value theorem, $\exists c \in [0,4]: f(c)=0$. \hfill $\Box$ \\
+    
+    \textbf{Discussion:} Graphing the function $f(x) = 4x - \cos^2(x)$ shows that there is only one unique real-valued solution over the interval [0,4]. Intuitively (without the graph), we can see this because of the linear term. Even though $-\cos^2(x)$ is an oscillating function, with an infinite number of real number solutions, the $4x$ term makes it so it only ever cross the x-axis once. the period of the function $-\cos^2(x)$ is $\pi$ with a magnitude of $-1$, but the vertical translation from the $4x$ term outweighs the magnitude. By the time another solution would appear, the function has been vertically translated by $4\pi \approx 12 > -1$.
 \newpage
 
 
 
 \section*{Problem 8}
 
-    \textbf{Result:} Let $a, b \in \mathbb{R}$. If $a>0$ and $b>0$, then $\frac{a}{b}+\frac{b}{a} \geq 2$.
-    \\
-    \textbf{Proof:} Let $a, b \in \mathbb{R}$. Therefore, 
-    \begin{align}
-        \frac{a}{b}+\frac{b}{a} \geq& \ 2 \notag \\
-        a+\frac{b^2}{a} \geq& \ 2b \notag \\
-        a^2+b^2 \geq& \ 2ab \notag \\
-        a^2 + b^2 -2ab \geq& \ 0 \notag
-    \end{align}
-    Now recognize that this inequality is very similar to that outlined in the Law of Cosines, which is pictured in inequality (5).
-    \begin{align}
-         a^2 + b^2 -2ab\cos(\theta) = c^2 
-    \end{align}
-    Observe that when the angle, $\theta$, is zero degrees, then the opposite side (length $c$) has a length of zero units. Also observe that $cos(0) = 1$. Therefore,
-    \begin{align}
-        a^2 + b^2 -2ab\cos(\theta) \geq c^2 \notag \\
-        a^2 + b^2 -2ab\cos(0) \geq 0 \notag \\
-        a^2 + b^2 -2ab \geq 0 \notag \\
-        a^2 + b^2 \geq 2ab \notag
-    \end{align}
-    The proof has been completed.
-    \hfill $\Box$
+    \textbf{Result:} There is a real number $x$ such that $x^6 + x^4 - 2x^2 + 1 = 0$.\\
 
+    \textbf{Disproof:} We work to show that for every real number $x$, the equation $x^6 + x^4 - 2x^2 + 1 = 0$ is false.
+    \begin{align}
+        x^6 + x^4 - 2x^2 + 1 = 0 \notag \\
+        x^6 + x^4 - 2x^2 = -1 \notag \\
+        x^2(x^4 + x^2 -2) = -1 \notag
+    \end{align}
+    Notice that we have a product of numbers equalling $-1$. Recall that the only way to have a product of $-1$ over the domain $\mathbb{Z}$ is for the components of the product to be either $(-1, 1)$ or $(1, -1)$ Therefore, we have two cases. \\
+    \textit{Case 1:} Suppose $x^2 = -1$ and $(x^4 + x^2 -2)=1$. We know that $x^2 = -1$ is not possible over $\mathbb{Z}$, so we know this case to be false. \\
+    \textit{Case 2:} Suppose $x^2 = 1$ and $(x^4 + x^2 -2)=-1$. The only way for $x^2$ to equal 1 is if $x=\pm1$. However, when plugging $x=\pm1$ into the second expression, we find
+    \begin{align}
+        (x^4 + x^2 -2)=-1 \notag \\
+        ((1)^4 + (1)^2 -2)=-1 \notag \\
+        (1 + 1 -2)=-1 \notag \\
+        0 \neq -1 \notag \\
+        \notag \\
+        (x^4 + x^2 -2)=-1 \notag \\
+        ((-1)^4 + (-1)^2 -2)=-1 \notag \\
+        (1 + 1 -2)=-1 \notag \\
+        0 \neq -1 \notag 
+    \end{align}
+    Since neither case works, we have that the equation $x^6 + x^4 - 2x^2 + 1 = 0$ is false for every $x$. \hfill $\Box$
+
+\newpage
+
+
+
+\section*{Problem 9}
+
+    \textbf{Result:} The king places one crown each, taken from a pool of 3 gold crowns and 2 silver crowns, on the heads of three suitors. When neither of the first two suitors know which crown is on their own head (by observing the color of the crowns on the other suitor's heads), the third suitor correctly deduces that he has a gold crown on his head, despite being blind.\\
+
+    \textbf{Proof:} Throughout this proof, I will refer to a gold crown as $G$ and a silver crown as $S$.\\
+    The most direct way for a suitor to know what crown is on his head is if he sees a silver crown on each of the other suitors' heads. He would then deduce that he himself has a gold crown, since there are no silver crowns left for himself. \\
+    When suitor one says that he is unable to tell, it eliminates the combination of $(S, S)$ for the other two suitors. We remain with six of $2^3 = 8$ cases, given below.
+    \begin{displaymath}
+    \begin{array}{c|c|c}
+    \text{Suitor 1} & \text{Suitor 2} & \text{Suitor 3} \\
+    \hline
+    G & G & G \\
+    G & G & S \\
+    G & S & G \\
+    S & G & G \\
+    S & G & S \\
+    S & S & G \\
+    \end{array}
+    \end{displaymath}
+    Notice that the combination $(S, S, S)$ cannot exist because there are only 2 silver crowns. \\
+    We now come to the second suitor. He similarily says he does not know, so it is safe to eliminate the case where Suitor 1 and Suitor 3 both have silver crowns.
+    \begin{displaymath}
+    \begin{array}{c|c|c}
+    \text{Suitor 1} & \text{Suitor 2} & \text{Suitor 3} \\
+    \hline
+    G & G & G \\
+    G & G & S \\
+    G & S & G \\
+    S & G & G \\
+    S & S & G \\
+    \end{array}
+    \end{displaymath}
+    Also notice that when observing the third suitor, if the second suitor were to see a silver crown, he would immediately know that he himself does not have a silver crown (recall the first suitor's testimony), implying he has a gold crown. However, because Suitor 2 says he does not know, we can safely eliminate this case as well.
+    \begin{displaymath}
+    \begin{array}{c|c|c}
+    \text{Suitor 1} & \text{Suitor 2} & \text{Suitor 3} \\
+    \hline
+    G & G & G \\
+    G & S & G \\
+    S & G & G \\
+    S & S & G \\
+    \end{array}
+    \end{displaymath}
+    Notice that of the remaining cases, in every case, Suitor 3 has a gold crown on his head. Therefore, the third suitor is capable of deducing that he must have a gold crown on his head, without seeing the other suitors' crowns. \hfill $\Box$
 \newpage
 \end{document}
