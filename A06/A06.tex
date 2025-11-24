@@ -221,134 +221,43 @@
 
 \section*{Problem 6}
 
-    \textbf{Result:} For a real number $x$, if $ x - \frac{x}{2} > 1$, then $x > 2$. \\
-    
-    \textbf{Proof (direct):} Let $x$ be a real number. From the statement above and through algebra, we get 
-    \begin{align}
-        x - \frac{2}{x} > 1 \notag \\
-        x^2 - 2 > x \notag \\
-        x^2 -x -2 > 0 \notag \\
-        (x - 2)(x + 1) > 0 \notag 
-    \end{align} 
-    Notice that of the two terms of the product, $(x+1)$ is always positive for $x > 0$. That leaves us with
-    \begin{align}
-        x - 2 > 0
-    \end{align}
-    Hence, the proof is complete. \hfill $\Box$ \\
+    \textbf{Result:} For every integer $n \geq 28$, there exist nonnegative integers $x$ and $y$ such that 
+\begin{align*}
+    n = 5x + 8y.
+\end{align*}
 
-    \textbf{Proof, by contrapositive:} Let $x$ be a real number. We will work to show that if $x \leq 2$, then $ x - \frac{x}{2} \leq 1$.
-    \begin{align}
-        x \leq 2 \notag \\
-        x - 2 \leq 0 \notag \\
-        (x-2)(x+1) \leq 0 \notag \\
-        x^2 - x - 2 \leq 0 \notag \\
-        x^2 - 2 \leq x \notag \\
-        x - \frac{2}{x} \leq 1 \notag
-    \end{align}
-    The result has been proven. \hfill $\Box$ \\
+\textbf{Proof:} We use the Strong Principle of Mathematical Induction.
 
-    \textbf{Proof, by contradiction:} Let $x$ be a real number. Suppose, to the contrary, that if if $ x - \frac{x}{2} > 1$, then $x \leq 2$. However, by the contrapositive argument given above, when $x \leq 2$,  $ x - \frac{x}{2} \leq 1$, which is a contradiction. Therefore, the result has been proven. \hfill $\Box$
-
-\newpage
-
-
-
-\section*{Problem 7}
-
-    \textbf{Result:} The equation $4x - \cos^2(x) = 10$ has a real number solution in the interval $[0,4]$. \\
-    
-    \textbf{Proof:} Let $f$ be a function defined as $f(x) = 4x - \cos^2(x)$, which is defined over all $x \in \mathbb{R}$. Notice that the function is continuous over $\mathbb{R}$, since a combination of a linear and trigonometric term result in a continuous function. \\
-    Evaluating at each endpoint of the interval in question, we get
-    \begin{align}
-        f(x) = 4x - \cos^2(x) \notag \\
-        f(0) = 4(0) - \cos^2(0) \notag \\
-        f(0) = -1 \notag \\
-        \notag \\
-        f(4) = 4(4) - \cos^2(4) \notag \\
-        f(4) = 16 - \cos^2(4) \notag \\
-        f(4) \approx 15 \notag
-    \end{align}
-    Notice that $-1 \leq 0 \leq 15$. \\
-    By the intermediate value theorem, $\exists c \in [0,4]: f(c)=0$. \hfill $\Box$ \\
-    
-    \textbf{Discussion:} Graphing the function $f(x) = 4x - \cos^2(x)$ shows that there is only one unique real-valued solution over the interval [0,4]. Intuitively (without the graph), we can see this because of the linear term. Even though $-\cos^2(x)$ is an oscillating function, with an infinite number of real number solutions, the $4x$ term makes it so it only ever cross the x-axis once. the period of the function $-\cos^2(x)$ is $\pi$ with a magnitude of $-1$, but the vertical translation from the $4x$ term outweighs the magnitude. By the time another solution would appear, the function has been vertically translated by $4\pi \approx 12 > -1$.
-\newpage
+First, we verify the statement for the integers $n = 28, 29, 30, 31,$ and $32$:
+\begin{align*}
+    28 &= 5(0) + 8(3), \\
+    29 &= 5(1) + 8(3), \\
+    30 &= 5(6) + 8(0), \\
+    31 &= 5(3) + 8(2), \\
+    32 &= 5(4) + 8(2).
+\end{align*}
+Thus, the statement is true for $n = 28, 29, 30, 31,$ and $32$. \\
+Now assume that for some integer $k \geq 32$, the statement holds for all integers $m$ satisfying 
+\begin{align*}
+    28 \leq m \leq k.
+\end{align*}
+We work to show that the statement holds for $n = k+1$. Since $k \geq 32$, we have
+\begin{align*}
+    (k+1) - 5 = k - 4 \geq 28.
+\end{align*}
+By the inductive hypothesis, the integer $k - 4$ can be written as
+\begin{align*}
+    k - 4 = 5x + 8y
+\end{align*}
+for some nonnegative integers $x$ and $y$. We add $5$ to both sides:
+\begin{align*}
+    k+1 &= (k - 4) + 5 \\
+        &= 5x + 8y + 5 \\
+        &= 5(x+1) + 8y.
+\end{align*}
+Since $x+1$ and $y$ are nonnegative integers, this expresses $k+1$ in the required form. \\
+Therefore, by the Strong Principle of Mathematical Induction, every integer $n \geq 28$ can be written as $5x + 8y$ for some nonnegative integers $x$ and $y$. \hfill $\Box$
 
 
 
-\section*{Problem 8}
-
-    \textbf{Result:} There is a real number $x$ such that $x^6 + x^4 - 2x^2 + 1 = 0$.\\
-
-    \textbf{Disproof:} We work to show that for every real number $x$, the equation $x^6 + x^4 - 2x^2 + 1 = 0$ is false.
-    \begin{align}
-        x^6 + x^4 - 2x^2 + 1 = 0 \notag \\
-        x^6 + x^4 - 2x^2 = -1 \notag \\
-        x^2(x^4 + x^2 -2) = -1 \notag
-    \end{align}
-    Notice that we have a product of numbers equalling $-1$. Recall that the only way to have a product of $-1$ over the domain $\mathbb{Z}$ is for the components of the product to be either $(-1, 1)$ or $(1, -1)$ Therefore, we have two cases. \\
-    \textit{Case 1:} Suppose $x^2 = -1$ and $(x^4 + x^2 -2)=1$. We know that $x^2 = -1$ is not possible over $\mathbb{Z}$, so we know this case to be false. \\
-    \textit{Case 2:} Suppose $x^2 = 1$ and $(x^4 + x^2 -2)=-1$. The only way for $x^2$ to equal 1 is if $x=\pm1$. However, when plugging $x=\pm1$ into the second expression, we find
-    \begin{align}
-        (x^4 + x^2 -2)=-1 \notag \\
-        ((1)^4 + (1)^2 -2)=-1 \notag \\
-        (1 + 1 -2)=-1 \notag \\
-        0 \neq -1 \notag \\
-        \notag \\
-        (x^4 + x^2 -2)=-1 \notag \\
-        ((-1)^4 + (-1)^2 -2)=-1 \notag \\
-        (1 + 1 -2)=-1 \notag \\
-        0 \neq -1 \notag 
-    \end{align}
-    Since neither case works, we have that the equation $x^6 + x^4 - 2x^2 + 1 = 0$ is false for every $x$. \hfill $\Box$
-
-\newpage
-
-
-
-\section*{Problem 9}
-
-    \textbf{Result:} The king places one crown each, taken from a pool of 3 gold crowns and 2 silver crowns, on the heads of three suitors. When neither of the first two suitors know which crown is on their own head (by observing the color of the crowns on the other suitor's heads), the third suitor correctly deduces that he has a gold crown on his head, despite being blind.\\
-
-    \textbf{Proof:} Throughout this proof, I will refer to a gold crown as $G$ and a silver crown as $S$.\\
-    The most direct way for a suitor to know what crown is on his head is if he sees a silver crown on each of the other suitors' heads. He would then deduce that he himself has a gold crown, since there are no silver crowns left for himself. \\
-    When suitor one says that he is unable to tell, it eliminates the combination of $(S, S)$ for the other two suitors. We remain with six of $2^3 = 8$ cases, given below.
-    \begin{displaymath}
-    \begin{array}{c|c|c}
-    \text{Suitor 1} & \text{Suitor 2} & \text{Suitor 3} \\
-    \hline
-    G & G & G \\
-    G & G & S \\
-    G & S & G \\
-    S & G & G \\
-    S & G & S \\
-    S & S & G \\
-    \end{array}
-    \end{displaymath}
-    Notice that the combination $(S, S, S)$ cannot exist because there are only 2 silver crowns. \\
-    We now come to the second suitor. He similarily says he does not know, so it is safe to eliminate the case where Suitor 1 and Suitor 3 both have silver crowns.
-    \begin{displaymath}
-    \begin{array}{c|c|c}
-    \text{Suitor 1} & \text{Suitor 2} & \text{Suitor 3} \\
-    \hline
-    G & G & G \\
-    G & G & S \\
-    G & S & G \\
-    S & G & G \\
-    S & S & G \\
-    \end{array}
-    \end{displaymath}
-    Also notice that when observing the third suitor, if the second suitor were to see a silver crown, he would immediately know that he himself does not have a silver crown (recall the first suitor's testimony), implying he has a gold crown. However, because Suitor 2 says he does not know, we can safely eliminate this case as well.
-    \begin{displaymath}
-    \begin{array}{c|c|c}
-    \text{Suitor 1} & \text{Suitor 2} & \text{Suitor 3} \\
-    \hline
-    G & G & G \\
-    G & S & G \\
-    S & G & G \\
-    S & S & G \\
-    \end{array}
-    \end{displaymath}
-    Notice that of the remaining cases, in every case, Suitor 3 has a gold crown on his head. Therefore, the third suitor is capable of deducing that he must have a gold crown on his head, without seeing the other suitors' crowns. \hfill $\Box$
-\newpage
 \end{document}
