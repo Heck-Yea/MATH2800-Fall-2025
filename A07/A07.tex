@@ -1,0 +1,244 @@
+\documentclass[11pt]{article}
+\usepackage{graphics,graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=1.cm,bottom=2cm]{geometry}
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\theequation}{\arabic{equation}}
+
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+
+% HEADER %
+\begin{document}
+\title{MATH 2800-01: Mathematics Major Seminar}
+\line
+\leftright{Assignment \# 07 ~~~~ 23 Nov 2025}{David Haberkorn}
+% END HEADER %
+
+
+\section*{Problem 1}
+
+    \textbf{Result:} The function $ f : \mathbb{Z} \rightarrow \mathbb{Z} $, defined by $ f(n) = 5n + 2$ is injective, but not surjective.
+    \\
+    \textbf{Proof:} We first prove that the function is injective. Let the function $f$ be defined as above, and suppose that $f(x) = f(y)$ for some arbitrary integers $x$ and $y$. From this assumption, we have
+    \begin{align*}
+        f(x) &= f(y) \\
+        5x + 2 &= 5y + 2 \\
+        5x &= 5y \\
+        x &= y
+    \end{align*}
+    By the definition of injective, we have shown that the function $f$ is injective. \\
+    To show that $f$ is not surjective, we demonstrate a counterexample. We seek two integers $q, r$ such that $f(q) = r$ has no solution. \\
+    Consider $r = 1$. In this case, we have 
+    \begin{align*}
+        f(q) &= 1 \\
+        5n + 2 &= 1 \\
+        5n &= -1 \\
+        n &= -\frac{1}{5}
+    \end{align*}
+    Because $-\frac{1}{5}$ is not an integer, we have shown that $f$ is not surjective. \hfill $\Box$
+
+
+\newpage
+
+\section*{Problem 2}
+
+    \textbf{Result:} The function $ f : \mathbb{R} - \{2\}\rightarrow \mathbb{R} - \{5\} $ defined by $f(x) = \frac{5x+1}{x-2}$ is bijective.
+    \\
+    \textbf{Proof:} In order to show bijectivity, we must show that the function defined above is both injective and surjective. We begin by showing injectivity. \\
+    Let the function $f$ be defined as above, and suppose that $f(x) = f(y)$ for some arbitrary real numbers $x$ and $y$, excluding $x, y = 2$. From this assumption, we have
+    \begin{align*}
+        f(x) &= f(y) \\
+        \frac{5x+1}{x-2} &= \frac{5y+1}{y-2} \\
+        (5x + 1)(y-2) &= (x-2)(5y+1) \\
+        5xy -10x +y -2 &= 5xy +x -10y -2 \\
+        -10x +y &= -10y + x \\
+        -11x &= -11y \\
+        x &= y
+    \end{align*}
+    By the definition of injective, we have shown that the function $f$ is injective. \\
+    We now work to show surjectivity. \\
+    Let the function $f$ be defined as above, and suppose two real numbers $q, r$ such that $f(q) = r$. From this supposition, we have
+    \begin{align*}
+        f(q) &= r \\
+        \frac{5q+1}{q-2} &= r \\
+        5q+1 &= r(q-2) \\
+        5q+1 &= rq -2r \\
+        5q - rq &= -2r -1 \\
+        (5-r)q &= -2r -1 \\
+        q &= \frac{-2r -1}{5-r} \tag{1}
+    \end{align*}
+    Recall from the definition of the function that the codomain is the set of real numbers, excluding $5$. Since the solution above holds for all real numbers excluding $5$, the function is surjective. \\
+    However, we need to check if the integer $q$ can be an element of the domain. We do this using contradiction. Suppose that $q=2$, which is strictly not in the domain. From this, we have
+    \begin{align*}
+        2 &= \frac{-2r -1}{5-r} \\
+        10 - 2r &= -2r - 1 \\
+        10 &= -1
+    \end{align*}
+    which is clearly a contradiction. Thus, the equation found in (1) holds true. \\
+    Because the function is both injective and surjective, it is, by definition, bijective. \hfill $\Box$
+
+\newpage
+
+\section*{Problem 3}
+
+    \textbf{Result:} Let $A$ be a nonempty set and let $f: A \rightarrow A$ be a function. If $f \circ f = i_a$, then $f$ is bijective.
+    \\
+    \textbf{Proof:} Let $A$ be a nonempty set and let $f: A \rightarrow A$ be a function, and suppose that $f \circ f = i_a$. In order to show that $f$ is bijective, we must show that $f$ is both one-to-one and onto. We start with one-to-one. \\
+    Suppose that there are some elements $x, y \in A$ such that $f(x) = f(y)$. We work to show that $x = y$.
+    \begin{align*}
+        f(x) &= f(y) \\
+        f(f(x)) &= f(f(y))
+    \end{align*}
+    By the definition of the identity function, we have 
+    \begin{align*}
+        f(f(x)) &= f(f(y)) \\
+        x = y
+    \end{align*}
+    Thus, $f$ is one-to-one. \\
+    We now work to show that $f$ is also onto. Let $r$ be an arbitrary element in $A$, and let another arbitrary element $q \in A$ be such that $f(r) = q$. We know that $q$ exists because $f$ is defined by $f: A \rightarrow A$. Through algebra, we have
+    \begin{align*}
+        f(r) &= q \\
+        f(f(r)) &= f(q) \\
+        r &= f(q)
+    \end{align*}
+    Since we have shown that for an arbitrary element $r$ in the codomain $A$, there exists an element $q$ in the domain $A$ (specifically $q = f(r)$) such that $f(q) = r$, the function $f$ is onto. \\
+    Since $f$ is both one-to-one and onto, it is, by definition, bijective. \hfill $\Box$
+\newpage
+
+
+\section*{Problem 4}
+
+    \textbf{Result:} $4(k^2+k) < (2k+1)^2$ for every positive integer k.
+    \\  
+    \textbf{Proof:} Let $k$ be a positive integer. Then, by algebra, we have
+    \begin{align}
+        4(k^2+k) <& \ (2k+1)^2 \notag \\
+        4k^2 + 4k <& \ 4k^2 + 4k + 1 \notag \\
+        4k <& \ 4k + 1 \notag \\
+        0 <& \ 1 \notag
+    \end{align}
+    Thus, the statement has been proven. \hfill $\Box$ \\
+
+
+
+    \textbf{Result:} $\sum_{m=1}^{n} \frac{1}{\sqrt{m}} \leq 2\sqrt{n} - 1$ for every positive integer $n$.
+    \\
+    \textbf{Proof:} We use induction. Consider the case where $n = 1$.
+    \begin{align*}
+        \sum_{m=1}^{1} \frac{1}{\sqrt{m}} &= \frac{1}{\sqrt{1}} = 1 \\
+        2\sqrt{n} - 1 &= 2\sqrt{1} - 1 = 2 - 1 = 1
+    \end{align*}
+    Since $1 \leq 1$, the base case holds. \\
+    Now, assume that the hypothesis holds for some positive integer $k \geq 1$. In other words, 
+    \begin{align*}
+        \sum_{m=1}^{k} \frac{1}{\sqrt{m}} \leq 2\sqrt{k} - 1
+    \end{align*} 
+    We must show that the hypothesis holds for $n = k+1$. In other words, 
+    \begin{align*}
+        \sum_{m=1}^{k+1} \frac{1}{\sqrt{m}} \leq 2\sqrt{k+1} - 1
+    \end{align*}
+    We start with the left-hand side of the equation:
+    \begin{align*}
+        \sum_{m=1}^{k+1} \frac{1}{\sqrt{m}} &= \left( \sum_{m=1}^{k} \frac{1}{\sqrt{m}} \right) + \frac{1}{\sqrt{k+1}} \leq (2\sqrt{k} - 1) + \frac{1}{\sqrt{k+1}}
+    \end{align*}
+    To complete the proof, we need to show that $(2\sqrt{k} - 1) + \frac{1}{\sqrt{k+1}} \leq 2\sqrt{k+1} - 1$. By algebra, we have
+    \begin{align*}
+        (2\sqrt{k} - 1) + \frac{1}{\sqrt{k+1}} &\leq 2\sqrt{k+1} - 1 \\
+        2\sqrt{k} + \frac{1}{\sqrt{k+1}} &\leq 2\sqrt{k+1} \\
+        \frac{1}{\sqrt{k+1}} &\leq 2\sqrt{k+1} - 2\sqrt{k} \\
+        \frac{1}{\sqrt{k+1}} &\leq 2(\sqrt{k+1} - \sqrt{k})
+    \end{align*}
+    We multiply the right-hand side by the conjugate $\frac{\sqrt{k+1} + \sqrt{k}}{\sqrt{k+1} + \sqrt{k}}$:
+    \begin{align*}
+        2(\sqrt{k+1} - \sqrt{k}) &= 2 \cdot \frac{(\sqrt{k+1} - \sqrt{k})(\sqrt{k+1} + \sqrt{k})}{\sqrt{k+1} + \sqrt{k}} \\
+        &= 2 \cdot \frac{(k+1) - k}{\sqrt{k+1} + \sqrt{k}} \\
+        &= \frac{2}{\sqrt{k+1} + \sqrt{k}}
+    \end{align*}
+    Continuing, we have
+    \begin{align*}
+        \frac{1}{\sqrt{k+1}} &\leq \frac{2}{\sqrt{k+1} + \sqrt{k}} \\
+        \sqrt{k+1} + \sqrt{k} &\leq 2\sqrt{k+1} \\
+        \sqrt{k} &\leq \sqrt{k+1}
+    \end{align*}
+    Since $k$ is a positive integer, $k < k+1$, and thus $\sqrt{k} \leq \sqrt{k+1}$ is true. Therefore, the original inequality holds for $n=k+1$. \\
+    By the principle of mathematical induction, the statement $\sum_{m=1}^{n} \frac{1}{\sqrt{m}} \leq 2\sqrt{n} - 1$ holds for every positive integer $n$. \hfill $\Box$
+
+
+
+\newpage
+
+
+
+\section*{Problem 5}
+
+    \textbf{Result:} A sequence $\{a_n\}$ is defined recursively by $a_1 = 1$, $a_2 = 2$, and $a_n = a_{n-1} + 2a_{n-2}$ for $n \geq 3$. The $n$th term is also defined as $a_n = 2^{n-1}$.
+    \\
+    \textbf{Proof:} We proceed with strong induction. Consider the cases $n=1$ and $n=2$. For $n=1$, $a_1 = 1$ and $2^{1-1} = 2^0 = 1$. The first base case holds. For $n=2$, $a_2 = 2$ and $2^{2-1} = 2^1 = 2$. The second base case holds. \\
+    Now, assume for an arbitrary integer $k \geq 2$ that $a_i = 2^{i-1}$ for all integers $i$ with $1 \leq i \leq k$. \\
+    We show that the statement holds for $n=k+1$, i.e., $a_{k+1} = 2^{(k+1)-1} = 2^k$.
+    \begin{align*}
+    a_{k+1} &= a_k + 2a_{k-1} \\
+    &= 2^{k-1} + 2 \cdot 2^{(k-1)-1} \\
+    &= 2^{k-1} + 2^{1 + (k-2)} \\
+    &= 2^{k-1} + 2^{k-1} \\
+    &= 2 \cdot 2^{k-1} \\
+    &= 2^{1 + (k-1)}  \\
+    &= 2^k
+    \end{align*}
+    Thus, $a_{k+1} = 2^k$. By the principle of strong mathematical induction, the statement holds for all positive integers $n$. \hfill $\Box$
+
+\newpage
+
+
+\section*{Problem 6}
+
+    \textbf{Result:} For every integer $n \geq 28$, there exist nonnegative integers $x$ and $y$ such that 
+\begin{align*}
+    n = 5x + 8y.
+\end{align*}
+
+\textbf{Proof:} We use the Strong Principle of Mathematical Induction.
+
+First, we verify the statement for the integers $n = 28, 29, 30, 31,$ and $32$:
+\begin{align*}
+    28 &= 5(0) + 8(3), \\
+    29 &= 5(1) + 8(3), \\
+    30 &= 5(6) + 8(0), \\
+    31 &= 5(3) + 8(2), \\
+    32 &= 5(4) + 8(2).
+\end{align*}
+Thus, the statement is true for $n = 28, 29, 30, 31,$ and $32$. \\
+Now assume that for some integer $k \geq 32$, the statement holds for all integers $m$ satisfying 
+\begin{align*}
+    28 \leq m \leq k.
+\end{align*}
+We work to show that the statement holds for $n = k+1$. Since $k \geq 32$, we have
+\begin{align*}
+    (k+1) - 5 = k - 4 \geq 28.
+\end{align*}
+By the inductive hypothesis, the integer $k - 4$ can be written as
+\begin{align*}
+    k - 4 = 5x + 8y
+\end{align*}
+for some nonnegative integers $x$ and $y$. We add $5$ to both sides:
+\begin{align*}
+    k+1 &= (k - 4) + 5 \\
+        &= 5x + 8y + 5 \\
+        &= 5(x+1) + 8y.
+\end{align*}
+Since $x+1$ and $y$ are nonnegative integers, this expresses $k+1$ in the required form. \\
+Therefore, by the Strong Principle of Mathematical Induction, every integer $n \geq 28$ can be written as $5x + 8y$ for some nonnegative integers $x$ and $y$. \hfill $\Box$
+
+
+
+\end{document}
