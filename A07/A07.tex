@@ -133,7 +133,7 @@
     \begin{align*}
         (g \circ f)(x) &= \frac{4x-1}{2 \sqrt{x-x^2}} \\
         g(y) &= \frac{  4(\frac{y+1}{2})-1 }{  2 \sqrt{(\frac{y+1}{2})-(\frac{y+1}{2})^2}  } \\
-        g(y) &= \frac{  2y+1 }{  2 \sqrt{1-y^2}  }
+        g(y) &= \frac{  2y+1 }{ \sqrt{1-y^2}  }
     \end{align*}
     Thus, we have our function $g(y) = \frac{  2y+1 }{ 2 \sqrt{1-y^2}}$. \hfill $\Box$
 
@@ -217,6 +217,7 @@
     \begin{align*}
         \left| \frac{3x+1}{4x+3} - \frac{2}{3}\right| = \left| \frac{x-3}{12x+9} \right| < |x-3| < \delta = \epsilon
     \end{align*}
+    However, we must justify our claim that $ \left| \frac{x-3}{12x+9} \right| < |x-3| $. For this to be the case, we have that $|12x + 9| > 1$. Notice that as the limit approaches 3, we have that $|12x + 9| = |12(3) + 9| = 45 > 1$. This works for all values of $x$ around 3, therefore justifying the claim above. \\
     Thus, $ \lim_{x \to 3} (\frac{3x+1}{4x+3}) = \frac{2}{3} $. \hfill $\Box$
 
 \end{document}
