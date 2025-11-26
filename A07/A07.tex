@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+\usepackage{graphics,graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{times}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=1.cm,bottom=2cm]{geometry}
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\theequation}{\arabic{equation}}
+
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+
+% HEADER %
+\begin{document}
+\title{MATH 2800-01: Mathematics Major Seminar}
+\line
+\leftright{Assignment \# 07 ~~~~ 23 Nov 2025}{David Haberkorn}
+% END HEADER %
+
+
+\section*{Problem 1}
+
+    \textbf{Result:} The function $ f : \mathbb{Z} \rightarrow \mathbb{Z} $, defined by $ f(n) = 5n + 2$ is injective, but not surjective.
+    \\
+    \textbf{Proof:} We first prove that the function is injective. Let the function $f$ be defined as above, and suppose that $f(x) = f(y)$ for some arbitrary integers $x$ and $y$. From this assumption, we have
+    \begin{align*}
+        f(x) &= f(y) \\
+        5x + 2 &= 5y + 2 \\
+        5x &= 5y \\
+        x &= y
+    \end{align*}
+    By the definition of injective, we have shown that the function $f$ is injective. \\
+    To show that $f$ is not surjective, we demonstrate a counterexample. We seek two integers $q, r$ such that $f(q) = r$ has no solution. \\
+    Consider $r = 1$. In this case, we have 
+    \begin{align*}
+        f(q) &= 1 \\
+        5n + 2 &= 1 \\
+        5n &= -1 \\
+        n &= -\frac{1}{5}
+    \end{align*}
+    Because $-\frac{1}{5}$ is not an integer, we have shown that $f$ is not surjective. \hfill $\Box$
+
+
+\newpage
+
+\section*{Problem 2}
+
+    \textbf{Result:} The function $ f : \mathbb{R} - \{2\}\rightarrow \mathbb{R} - \{5\} $ defined by $f(x) = \frac{5x+1}{x-2}$ is bijective.
+    \\
+    \textbf{Proof:} In order to show bijectivity, we must show that the function defined above is both injective and surjective. We begin by showing injectivity. \\
+    Let the function $f$ be defined as above, and suppose that $f(x) = f(y)$ for some arbitrary real numbers $x$ and $y$, excluding $x, y = 2$. From this assumption, we have
+    \begin{align*}
+        f(x) &= f(y) \\
+        \frac{5x+1}{x-2} &= \frac{5y+1}{y-2} \\
+        (5x + 1)(y-2) &= (x-2)(5y+1) \\
+        5xy -10x +y -2 &= 5xy +x -10y -2 \\
+        -10x +y &= -10y + x \\
+        -11x &= -11y \\
+        x &= y
+    \end{align*}
+    By the definition of injective, we have shown that the function $f$ is injective. \\
+    We now work to show surjectivity. \\
+    Let the function $f$ be defined as above, and suppose two real numbers $q, r$ such that $f(q) = r$. From this supposition, we have
+    \begin{align*}
+        f(q) &= r \\
+        \frac{5q+1}{q-2} &= r \\
+        5q+1 &= r(q-2) \\
+        5q+1 &= rq -2r \\
+        5q - rq &= -2r -1 \\
+        (5-r)q &= -2r -1 \\
+        q &= \frac{-2r -1}{5-r} \tag{1}
+    \end{align*}
+    Recall from the definition of the function that the codomain is the set of real numbers, excluding $5$. Since the solution above holds for all real numbers excluding $5$, the function is surjective. \\
+    However, we need to check if the integer $q$ can be an element of the domain. We do this using contradiction. Suppose that $q=2$, which is strictly not in the domain. From this, we have
+    \begin{align*}
+        2 &= \frac{-2r -1}{5-r} \\
+        10 - 2r &= -2r - 1 \\
+        10 &= -1
+    \end{align*}
+    which is clearly a contradiction. Thus, the equation found in (1) holds true. \\
+    Because the function is both injective and surjective, it is, by definition, bijective. \hfill $\Box$
+
+\newpage
+
+\section*{Problem 3}
+
+    \textbf{Result:} Let $A$ be a nonempty set and let $f: A \rightarrow A$ be a function. If $f \circ f = i_a$, then $f$ is bijective.
+    \\
+    \textbf{Proof:} Let $A$ be a nonempty set and let $f: A \rightarrow A$ be a function, and suppose that $f \circ f = i_a$. In order to show that $f$ is bijective, we must show that $f$ is both one-to-one and onto. We start with one-to-one. \\
+    Suppose that there are some elements $x, y \in A$ such that $f(x) = f(y)$. We work to show that $x = y$.
+    \begin{align*}
+        f(x) &= f(y) \\
+        f(f(x)) &= f(f(y))
+    \end{align*}
+    By the definition of the identity function, we have 
+    \begin{align*}
+        f(f(x)) &= f(f(y)) \\
+        x = y
+    \end{align*}
+    Thus, $f$ is one-to-one. \\
+    We now work to show that $f$ is also onto. Let $r$ be an arbitrary element in $A$, and let another arbitrary element $q \in A$ be such that $f(r) = q$. We know that $q$ exists because $f$ is defined by $f: A \rightarrow A$. Through algebra, we have
+    \begin{align*}
+        f(r) &= q \\
+        f(f(r)) &= f(q) \\
+        r &= f(q)
+    \end{align*}
+    Since we have shown that for an arbitrary element $r$ in the codomain $A$, there exists an element $q$ in the domain $A$ (specifically $q = f(r)$) such that $f(q) = r$, the function $f$ is onto. \\
+    Since $f$ is both one-to-one and onto, it is, by definition, bijective. \hfill $\Box$
+\newpage
+
+
+\section*{Problem 4}
+
+    \textbf{Result:} Let the composition $ g \circ f : (0, 1) \rightarrow \mathbb{R} $ of two functions $f$ and $g$ be given by $ (g \circ f)(x) = \frac{4x-1}{2 \sqrt{x-x^2}} $ where $f: (0,1) \rightarrow (-1, 1) $ is defined by $ f(x) = 2x-1 $ for $x \in (0,1) $. The function $g$ is given by $g(y) = \frac{2y-1}{2\sqrt{1-y^2}}$.
+    \\
+    \textbf{Proof:} Let the function $f$ and the composition $g \circ f$ be defined as above. We work to find the function $g$. \\
+    From the definitions above, we have
+    \begin{align*}
+        f(x) &= 2x-1 \\
+        y &= 2x-1 \\
+        y+1 &= 2x \\
+        \frac{y+1}{2} &= x \tag{1}
+    \end{align*}
+    Expression (1) above is the inverse of $f(x)$, or in other words, $f^{-1}(x)$. \\
+    Plugging the inverse function into the composition $(g \circ f)(x)$, we will be able to 'undo' the function $f$ to be left with $g$.
+    \begin{align*}
+        (g \circ f)(x) &= \frac{4x-1}{2 \sqrt{x-x^2}} \\
+        g(y) &= \frac{  4(\frac{y+1}{2})-1 }{  2 \sqrt{(\frac{y+1}{2})-(\frac{y+1}{2})^2}  } \\
+        g(y) &= \frac{  2y+1 }{  2 \sqrt{1-y^2}  }
+    \end{align*}
+    Thus, we have our function $g(y) = \frac{  2y+1 }{ 2 \sqrt{1-y^2}}$. \hfill $\Box$
+
+\newpage
+
+
+
+\section*{Problem 5}
+
+    \textbf{Result:} Let $A = \mathbb{R} - \{1\}$ and define $f : A \rightarrow A$ by $f(x) = \frac{x}{x-1}$ for all $x \in A$. When this is the case, then $f$ is bijective, and $f^{-1} = f = \frac{x}{x-1}$.
+    \\
+    \textbf{Proof:} Let the function $f$ be defined as above. In order to show bijectivity, we must show injectivity and surjectivity. We begin with injectivity. \\
+    Suppose there are some elements $x, y \in A$ such that $f(x) = f(y)$. We work to show that $x = y$.
+    \begin{align*}
+        f(x) &= f(y) \\
+        \frac{x}{x-1} &= \frac{y}{y-1} \\
+        x(y-1) &= y(x-1) \\
+        xy - x &= xy - y \\
+        -x &= -y \\
+        x &= y
+    \end{align*}
+    Thus, $f$ is injective. \\
+    To show surjectivity, let $q, r$ be arbitrary elements in $A$ such that $f(q) = r$. We work to show that there exists such a $q$.
+    \begin{align*}
+        f(q) &= r \\
+        \frac{q}{q-1} &= r \\
+        q &= (q-1)r \\
+        q &= qr - r \\
+        0 &= qr - q - r \\
+        r &= qr - q \\
+        r &= q(r-1) \\
+        \frac{r}{r-1} &= q \\
+        q &= \frac{r}{r-1} 
+    \end{align*}
+    Recalling that the domain $A$ is defined by all real numbers, excluding $\{1\}$, we see that there does in fact exist such a $q$. \\
+    Since $f$ is both injective and surjective, we have that it is, in fact, bijective. \\
+    \\
+    In order to find the inverse of $f$, we use algebra. Let $f(x) = y$ and let $x \in A$.
+    \begin{align*}
+        f(x) &= \frac{x}{x-1} \\
+        y &= \frac{x}{x-1} \\
+    \end{align*}
+    Without loss of generality (from the proof of surjectivity), we have
+    \begin{align*}
+        x &= \frac{y}{y-1} \\
+        f^{-1}(x) &= \frac{y}{y-1}
+    \end{align*}
+    \hfill $\Box$
+\newpage
+
+
+\section*{Problem 6}
+
+    \textbf{Result:} The sequence $ \{\frac{n+2}{2n+3}\} $ is convergent to $\frac{1}{2}$.
+
+    \textbf{Proof:} We want to show that $ \lim_{n \to \infty} \ (\frac{n+2}{2n+3}) = \frac{1}{2}$. \\
+    Let $\epsilon > 0$. By algebra, we have
+    \begin{align*}
+        \left| \frac{n+2}{2n+3} - \frac{1}{2} \right| &< \epsilon \\
+        \left| \frac{2n+4}{4n+6} - \frac{2n+3}{4n+6} \right| &< \epsilon \\
+        \left| \frac{1}{4n+6} \right| &< \epsilon \\
+        \frac{1}{4n+6} &< \epsilon \\
+        4n + 6 &> \frac{1}{\epsilon} \\
+        n &> \frac{1}{4\epsilon}-\frac{3}{2}
+    \end{align*}
+    We now choose $ N = \lceil \frac{1}{4\epsilon}-\frac{3}{2} \rceil \geq (\frac{1}{4\epsilon}-\frac{3}{2}) $.
+    For $n > N$, we have
+    \begin{align*}
+        \left| \frac{n+2}{2n+3} - \frac{1}{2} \right| = \frac{1}{4n+6} < \frac{1}{4N+6} \leq \frac{1}{4 (\frac{1}{4\epsilon}-\frac{3}{2}) +6} = \frac{1}{\frac{4}{4\epsilon} - \frac{12}{2}+6} = \frac{1}{(\frac{1}{\epsilon})} = \epsilon
+    \end{align*}
+    Therefore, we have that the sequence $ \{\frac{n+2}{2n+3}\} $ is convergent to $\frac{1}{2}$. \hfill $\Box$
+
+\newpage
+
+
+\section*{Problem 7}
+
+    \textbf{Result:} $ \lim_{x \to 3} (\frac{3x+1}{4x+3}) = \frac{2}{3} $.
+
+    \textbf{Proof:} Let $ \epsilon > 0 $. Choose $\delta = \epsilon$. Then, for $ 0 < \left| x - 3 \right| < \delta $, we have
+    \begin{align*}
+        \left| \frac{3x+1}{4x+3} - \frac{2}{3}\right| = \left| \frac{x-3}{12x+9} \right| < |x-3| < \delta = \epsilon
+    \end{align*}
+    Thus, $ \lim_{x \to 3} (\frac{3x+1}{4x+3}) = \frac{2}{3} $. \hfill $\Box$
+
+\end{document}
