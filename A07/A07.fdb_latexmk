@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1764028314.34071 "c:/Users/djhab/OneDrive - University of Wyoming/Classes/Fall 2025/MATH2800 Math Major Seminar/MATH2800-Fall-2025/A07/A07.tex" "A07.pdf" "A07" 1764028315.21102 0
-  "A07.aux" 1764028315 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
-  "A07.tex" 1764028313 10782 c9327bc328a4ac0095bc5251ec95ee52 ""
-  "c:/Users/djhab/OneDrive - University of Wyoming/Classes/Fall 2025/MATH2800 Math Major Seminar/MATH2800-Fall-2025/A07/A07.tex" 1764028313 10782 c9327bc328a4ac0095bc5251ec95ee52 ""
+["pdflatex"] 1764122461.14889 "c:/Users/djhab/OneDrive - University of Wyoming/Classes/Fall 2025/MATH2800 Math Major Seminar/MATH2800-Fall-2025/A07/A07.tex" "A07.pdf" "A07" 1764122462.78468 0
+  "A07.aux" 1764122462 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
+  "A07.tex" 1764122458 9921 e00d8b5522516225973e51b8dc9d9752 ""
+  "c:/Users/djhab/OneDrive - University of Wyoming/Classes/Fall 2025/MATH2800 Math Major Seminar/MATH2800-Fall-2025/A07/A07.tex" 1764122458 9921 e00d8b5522516225973e51b8dc9d9752 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1757894385 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1757894953 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1757899607 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -29,6 +29,7 @@
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1757892730 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1757892730 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1757892730 35752 024fb6c41858982481f6968b5fc26508 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1757892730 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1757892730 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1757892730 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1757892730 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
