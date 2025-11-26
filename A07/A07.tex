@@ -187,43 +187,36 @@
 
 \section*{Problem 6}
 
-    \textbf{Result:} For every integer $n \geq 28$, there exist nonnegative integers $x$ and $y$ such that 
-\begin{align*}
-    n = 5x + 8y.
-\end{align*}
+    \textbf{Result:} The sequence $ \{\frac{n+2}{2n+3}\} $ is convergent to $\frac{1}{2}$.
 
-\textbf{Proof:} We use the Strong Principle of Mathematical Induction.
+    \textbf{Proof:} We want to show that $ \lim_{n \to \infty} \ (\frac{n+2}{2n+3}) = \frac{1}{2}$. \\
+    Let $\epsilon > 0$. By algebra, we have
+    \begin{align*}
+        \left| \frac{n+2}{2n+3} - \frac{1}{2} \right| &< \epsilon \\
+        \left| \frac{2n+4}{4n+6} - \frac{2n+3}{4n+6} \right| &< \epsilon \\
+        \left| \frac{1}{4n+6} \right| &< \epsilon \\
+        \frac{1}{4n+6} &< \epsilon \\
+        4n + 6 &> \frac{1}{\epsilon} \\
+        n &> \frac{1}{4\epsilon}-\frac{3}{2}
+    \end{align*}
+    We now choose $ N = \lceil \frac{1}{4\epsilon}-\frac{3}{2} \rceil \geq (\frac{1}{4\epsilon}-\frac{3}{2}) $.
+    For $n > N$, we have
+    \begin{align*}
+        \left| \frac{n+2}{2n+3} - \frac{1}{2} \right| = \frac{1}{4n+6} < \frac{1}{4N+6} \leq \frac{1}{4 (\frac{1}{4\epsilon}-\frac{3}{2}) +6} = \frac{1}{\frac{4}{4\epsilon} - \frac{12}{2}+6} = \frac{1}{(\frac{1}{\epsilon})} = \epsilon
+    \end{align*}
+    Therefore, we have that the sequence $ \{\frac{n+2}{2n+3}\} $ is convergent to $\frac{1}{2}$. \hfill $\Box$
 
-First, we verify the statement for the integers $n = 28, 29, 30, 31,$ and $32$:
-\begin{align*}
-    28 &= 5(0) + 8(3), \\
-    29 &= 5(1) + 8(3), \\
-    30 &= 5(6) + 8(0), \\
-    31 &= 5(3) + 8(2), \\
-    32 &= 5(4) + 8(2).
-\end{align*}
-Thus, the statement is true for $n = 28, 29, 30, 31,$ and $32$. \\
-Now assume that for some integer $k \geq 32$, the statement holds for all integers $m$ satisfying 
-\begin{align*}
-    28 \leq m \leq k.
-\end{align*}
-We work to show that the statement holds for $n = k+1$. Since $k \geq 32$, we have
-\begin{align*}
-    (k+1) - 5 = k - 4 \geq 28.
-\end{align*}
-By the inductive hypothesis, the integer $k - 4$ can be written as
-\begin{align*}
-    k - 4 = 5x + 8y
-\end{align*}
-for some nonnegative integers $x$ and $y$. We add $5$ to both sides:
-\begin{align*}
-    k+1 &= (k - 4) + 5 \\
-        &= 5x + 8y + 5 \\
-        &= 5(x+1) + 8y.
-\end{align*}
-Since $x+1$ and $y$ are nonnegative integers, this expresses $k+1$ in the required form. \\
-Therefore, by the Strong Principle of Mathematical Induction, every integer $n \geq 28$ can be written as $5x + 8y$ for some nonnegative integers $x$ and $y$. \hfill $\Box$
+\newpage
 
 
+\section*{Problem 7}
+
+    \textbf{Result:} $ \lim_{x \to 3} (\frac{3x+1}{4x+3}) = \frac{2}{3} $.
+
+    \textbf{Proof:} Let $ \epsilon > 0 $. Choose $\delta = \epsilon$. Then, for $ 0 < \left| x - 3 \right| < \delta $, we have
+    \begin{align*}
+        \left| \frac{3x+1}{4x+3} - \frac{2}{3}\right| = \left| \frac{x-3}{12x+9} \right| < |x-3| < \delta = \epsilon
+    \end{align*}
+    Thus, $ \lim_{x \to 3} (\frac{3x+1}{4x+3}) = \frac{2}{3} $. \hfill $\Box$
 
 \end{document}
