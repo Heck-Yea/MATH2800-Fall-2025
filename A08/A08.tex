@@ -85,133 +85,63 @@
 
 \section*{Problem 3}
 
-    \textbf{Result:} Let $A$ be a nonempty set and let $f: A \rightarrow A$ be a function. If $f \circ f = i_a$, then $f$ is bijective.
+    \textbf{Result:} Suppose two functions, one the bounded function $g:\mathbb{R} \to \mathbb{R}$, meaning there exists a positive real number $B$ such that $\left| g(x) \right| < B$ for each $x \in \mathbb{R}$, and the other $f:\mathbb{R} \to \mathbb{R}$ where $a \in \mathbb{R}$ such that $\lim_{x \to a} f(x) = 0$. Given these two functions, then $\lim_{x \to a} f(x)g(x) = 0$.
     \\
-    \textbf{Proof:} Let $A$ be a nonempty set and let $f: A \rightarrow A$ be a function, and suppose that $f \circ f = i_a$. In order to show that $f$ is bijective, we must show that $f$ is both one-to-one and onto. We start with one-to-one. \\
-    Suppose that there are some elements $x, y \in A$ such that $f(x) = f(y)$. We work to show that $x = y$.
+    \textbf{Proof:} Let $\epsilon > 0$, and choose $\delta = \frac{\epsilon}{B}$. Suppose $0 < \left|x-a\right| < \delta$. We have
     \begin{align*}
-        f(x) &= f(y) \\
-        f(f(x)) &= f(f(y))
+        \left|f(x)g(x)-0\right| = \left|f(x)g(x)\right| = \left|f(x)\right| \left|g(x)\right| < \left|f(x)\right|B < \delta B = B\cdot \frac{\epsilon}{B} = \epsilon
     \end{align*}
-    By the definition of the identity function, we have 
+    Therefore, $\lim_{x \to a} f(x)g(x) = 0$.
+    \\
+    \textbf{Problem:} Use the above result to determine $\lim_{x \to 0} x^2\sin(\frac{1}{x})$.
+    \\
+    \textbf{Solution:} Let the function $f:\mathbb{R} \to \mathbb{R}$ be defined by $f(x) = x^2$ and let $g:\mathbb{R} \to \mathbb{R}$ be defined by $g(x) = \sin(\frac{1}{x})$. Notice that when evaluating $ \lim_{x \to 0}f(x) = \lim_{x \to 0}x^2 = 0$. Also notice that for all $s \in \mathbb{R}$, $-1 < \sin(s) < 1$ Since $s = \frac{1}{t}$ is a real number for all $ t \in \mathbb{R} - \{0\}$, the function $g(x) = \sin(\frac{1}{x})$ is a bounded function. \\
+    From above, when evaluating the limit of a function that evaluates to $0$, and multiplying it by a bounded function, the result is the same limit as the original function. In this example, we have a function (namely $f$) whose limit as $x$ approaches $0$ evaluates to $0$. When multiplying it by the bounded function $g$, we have the same limit as $x$ approaches $0$. Therefore, 
     \begin{align*}
-        f(f(x)) &= f(f(y)) \\
-        x = y
+        \lim_{x \to 0}f(x)g(x) = \lim_{x \to 0}x^2\sin(\frac{1}{x}) = 0. 
     \end{align*}
-    Thus, $f$ is one-to-one. \\
-    We now work to show that $f$ is also onto. Let $r$ be an arbitrary element in $A$, and let another arbitrary element $q \in A$ be such that $f(r) = q$. We know that $q$ exists because $f$ is defined by $f: A \rightarrow A$. Through algebra, we have
-    \begin{align*}
-        f(r) &= q \\
-        f(f(r)) &= f(q) \\
-        r &= f(q)
-    \end{align*}
-    Since we have shown that for an arbitrary element $r$ in the codomain $A$, there exists an element $q$ in the domain $A$ (specifically $q = f(r)$) such that $f(q) = r$, the function $f$ is onto. \\
-    Since $f$ is both one-to-one and onto, it is, by definition, bijective. \hfill $\Box$
+    \hfill $\Box$
+    
 \newpage
 
 
 \section*{Problem 4}
 
-    \textbf{Result:} Let the composition $ g \circ f : (0, 1) \rightarrow \mathbb{R} $ of two functions $f$ and $g$ be given by $ (g \circ f)(x) = \frac{4x-1}{2 \sqrt{x-x^2}} $ where $f: (0,1) \rightarrow (-1, 1) $ is defined by $ f(x) = 2x-1 $ for $x \in (0,1) $. The function $g$ is given by $g(y) = \frac{2y-1}{2\sqrt{1-y^2}}$.
+    \textbf{Result:} Let $f: [1,\infty) \to [0, \infty)$ be defined by $f(x) = \sqrt{x-1}$. $f$ is both continuous and differentiable at $x=10$.
     \\
-    \textbf{Proof:} Let the function $f$ and the composition $g \circ f$ be defined as above. We work to find the function $g$. \\
-    From the definitions above, we have
+    \textbf{Proof:} Let $f: [1,\infty) \to [0, \infty)$ be defined by $f(x) = \sqrt{x-1}$. We will start by showing that $f$ is continuous at $x=10$. \\
+    Evaluating $\lim_{x \to 10}\sqrt{x-1}$, we have
     \begin{align*}
-        f(x) &= 2x-1 \\
-        y &= 2x-1 \\
-        y+1 &= 2x \\
-        \frac{y+1}{2} &= x \tag{1}
+        \lim_{x \to 10}\sqrt{x-1} = \sqrt{10-1} = 3
     \end{align*}
-    Expression (1) above is the inverse of $f(x)$, or in other words, $f^{-1}(x)$. \\
-    Plugging the inverse function into the composition $(g \circ f)(x)$, we will be able to 'undo' the function $f$ to be left with $g$.
+    Let $\epsilon > 0$, and choose $\delta = 3\epsilon$. Now suppose $0 < \left|x-10\right| < \delta$. We have
     \begin{align*}
-        (g \circ f)(x) &= \frac{4x-1}{2 \sqrt{x-x^2}} \\
-        g(y) &= \frac{  4(\frac{y+1}{2})-1 }{  2 \sqrt{(\frac{y+1}{2})-(\frac{y+1}{2})^2}  } \\
-        g(y) &= \frac{  2y+1 }{ \sqrt{1-y^2}  }
+        \left|\sqrt{x-1}-3\right| = \left|\sqrt{x-1}-3\right| \cdot \frac{\left|\sqrt{x-1}+3\right|}{\left|\sqrt{x-1}+3\right|} = \left|\frac{x-10}{\sqrt{x-1}+3}\right|
     \end{align*}
-    Thus, we have our function $g(y) = \frac{  2y+1 }{ 2 \sqrt{1-y^2}}$. \hfill $\Box$
+    Since $\sqrt{x-1}$ is always positive (from our domain), we have
+    \begin{align*}
+        \left|\frac{x-10}{\sqrt{x-1}+3}\right| \leq \left|\frac{x-10}{3}\right| < \frac{\delta}{3} = \frac{3\epsilon}{3} = \epsilon
+    \end{align*}
+    Because $f$ is defined at $x=10$, and the limit as $x$ approaches $10$ both exists and is equal to $f(10)$, we have that $f$ is continuous. \\
+    We now work to show that $f$ is differentiable at $x=10$. Consider the definition of the derivative, where
+    \begin{align*}
+        f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}
+    \end{align*}
+    exists. From here, we have
+    \begin{align*}
+        f'(10) = \lim_{x \to 10} \frac{f(x)-f(10)}{x-10} = \lim_{x \to 10} \frac{\sqrt{x-1}-3}{x-10} = \lim_{x \to 10} \frac{\sqrt{x-1}-3}{x-10} \cdot \frac{\sqrt{x-1}+3}{\sqrt{x-1}+3} = \lim_{x \to 10} \frac{(x-10)}{(x-10)(\sqrt{x-1}+ 3)}
+    \end{align*}
+    Because we are evaluating the limit as $x$ approaches $10$, rather than $x = 10$, we can say that $x \neq 10$ and simplify the $(x-10)$ values from the numerator and denominator.
+    \begin{align*}
+        \lim_{x \to 10} \frac{(x-10)}{(x-10)(\sqrt{x-1}+ 3)} = \lim_{x \to 10} \frac{1}{\sqrt{x-1}+ 3}
+    \end{align*}
+    Now, because the function is continuous, we can evaluate the limit as follows.
+    \begin{align*}
+        \lim_{x \to 10} \frac{1}{\sqrt{x-1}+ 3} = \frac{1}{\sqrt{(10) - 1}+3} = \frac{1}{6}
+    \end{align*}
+    Since the limit exists, $f$ is differentiable at $x=10$. \hfill $\Box$
 
 \newpage
 
-
-
-\section*{Problem 5}
-
-    \textbf{Result:} Let $A = \mathbb{R} - \{1\}$ and define $f : A \rightarrow A$ by $f(x) = \frac{x}{x-1}$ for all $x \in A$. When this is the case, then $f$ is bijective, and $f^{-1} = f = \frac{x}{x-1}$.
-    \\
-    \textbf{Proof:} Let the function $f$ be defined as above. In order to show bijectivity, we must show injectivity and surjectivity. We begin with injectivity. \\
-    Suppose there are some elements $x, y \in A$ such that $f(x) = f(y)$. We work to show that $x = y$.
-    \begin{align*}
-        f(x) &= f(y) \\
-        \frac{x}{x-1} &= \frac{y}{y-1} \\
-        x(y-1) &= y(x-1) \\
-        xy - x &= xy - y \\
-        -x &= -y \\
-        x &= y
-    \end{align*}
-    Thus, $f$ is injective. \\
-    To show surjectivity, let $q, r$ be arbitrary elements in $A$ such that $f(q) = r$. We work to show that there exists such a $q$.
-    \begin{align*}
-        f(q) &= r \\
-        \frac{q}{q-1} &= r \\
-        q &= (q-1)r \\
-        q &= qr - r \\
-        0 &= qr - q - r \\
-        r &= qr - q \\
-        r &= q(r-1) \\
-        \frac{r}{r-1} &= q \\
-        q &= \frac{r}{r-1} 
-    \end{align*}
-    Recalling that the domain $A$ is defined by all real numbers, excluding $\{1\}$, we see that there does in fact exist such a $q$. \\
-    Since $f$ is both injective and surjective, we have that it is, in fact, bijective. \\
-    \\
-    In order to find the inverse of $f$, we use algebra. Let $f(x) = y$ and let $x \in A$.
-    \begin{align*}
-        f(x) &= \frac{x}{x-1} \\
-        y &= \frac{x}{x-1} \\
-    \end{align*}
-    Without loss of generality (from the proof of surjectivity), we have
-    \begin{align*}
-        x &= \frac{y}{y-1} \\
-        f^{-1}(x) &= \frac{y}{y-1}
-    \end{align*}
-    \hfill $\Box$
-\newpage
-
-
-\section*{Problem 6}
-
-    \textbf{Result:} The sequence $ \{\frac{n+2}{2n+3}\} $ is convergent to $\frac{1}{2}$.
-
-    \textbf{Proof:} We want to show that $ \lim_{n \to \infty} \ (\frac{n+2}{2n+3}) = \frac{1}{2}$. \\
-    Let $\epsilon > 0$. By algebra, we have
-    \begin{align*}
-        \left| \frac{n+2}{2n+3} - \frac{1}{2} \right| &< \epsilon \\
-        \left| \frac{2n+4}{4n+6} - \frac{2n+3}{4n+6} \right| &< \epsilon \\
-        \left| \frac{1}{4n+6} \right| &< \epsilon \\
-        \frac{1}{4n+6} &< \epsilon \\
-        4n + 6 &> \frac{1}{\epsilon} \\
-        n &> \frac{1}{4\epsilon}-\frac{3}{2}
-    \end{align*}
-    We now choose $ N = \lceil \frac{1}{4\epsilon}-\frac{3}{2} \rceil \geq (\frac{1}{4\epsilon}-\frac{3}{2}) $.
-    For $n > N$, we have
-    \begin{align*}
-        \left| \frac{n+2}{2n+3} - \frac{1}{2} \right| = \frac{1}{4n+6} < \frac{1}{4N+6} \leq \frac{1}{4 (\frac{1}{4\epsilon}-\frac{3}{2}) +6} = \frac{1}{\frac{4}{4\epsilon} - \frac{12}{2}+6} = \frac{1}{(\frac{1}{\epsilon})} = \epsilon
-    \end{align*}
-    Therefore, we have that the sequence $ \{\frac{n+2}{2n+3}\} $ is convergent to $\frac{1}{2}$. \hfill $\Box$
-
-\newpage
-
-
-\section*{Problem 7}
-
-    \textbf{Result:} $ \lim_{x \to 3} (\frac{3x+1}{4x+3}) = \frac{2}{3} $.
-
-    \textbf{Proof:} Let $ \epsilon > 0 $. Choose $\delta = \epsilon$. Then, for $ 0 < \left| x - 3 \right| < \delta $, we have
-    \begin{align*}
-        \left| \frac{3x+1}{4x+3} - \frac{2}{3}\right| = \left| \frac{x-3}{12x+9} \right| < |x-3| < \delta = \epsilon
-    \end{align*}
-    However, we must justify our claim that $ \left| \frac{x-3}{12x+9} \right| < |x-3| $. For this to be the case, we have that $|12x + 9| > 1$. Notice that as the limit approaches 3, we have that $|12x + 9| = |12(3) + 9| = 45 > 1$. This works for all values of $x$ around 3, therefore justifying the claim above. \\
-    Thus, $ \lim_{x \to 3} (\frac{3x+1}{4x+3}) = \frac{2}{3} $. \hfill $\Box$
 
 \end{document}
