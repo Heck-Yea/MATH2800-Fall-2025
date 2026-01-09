@@ -29,10 +29,9 @@
 
     \textbf{Result:} Suppose that $ \lim_{x \to a} f(x) = L$, where $L>0$. Then $ \lim_{x \to a} \sqrt{f(x)} = \sqrt{L}$.
     \\
-    \textbf{Proof:} Let $\epsilon > 0$. Since $\lim_{x \to a} f(x) = L$, there exists a $\delta > 0$ such that if $0 < |x-a| < \delta$, then $|f(x) - L| < \epsilon\sqrt{L}$. \\
-    Now suppose $0 < |x-a| < \delta$. We have
+    \textbf{Proof:} Let $\epsilon > 0$, and choose $\delta = \epsilon\sqrt{L}$. Now suppose $0 < |x-a| < \delta$. We have
     \begin{align*}
-        |\sqrt{f(x)} - \sqrt{L}| = \frac{|f(x)-L|}{|\sqrt{f(x)} + \sqrt{L}|} \leq \frac{|f(x)-L|}{\sqrt{L}} < \frac{\delta}{\sqrt{L}} = \frac{\sqrt{L}\epsilon}{\sqrt{L}} = \epsilon
+        |\sqrt{f(x)} - \sqrt{L}| = \frac{|f(x)-L|}{|\sqrt{f(x)} + \sqrt{L}|} \leq \frac{|f(x)-L|}{\sqrt{L}} < \frac{\delta}{\sqrt{L}} = \frac{\epsilon\sqrt{L}}{\sqrt{L}} = \epsilon
     \end{align*}
     Thus, $ \lim_{x \to a} \sqrt{f(x)} = \sqrt{L}$. \hfill $\Box$
 
@@ -59,7 +58,7 @@
     \end{enumerate}
     From the definition of $Q(x)$ above, we have that $Q(1) = -\frac{1}{2}$, which satisfies the third criteria above. \\
     To show the first and second criteria, we employ an $\epsilon - \delta$ proof. \\
-    Let $\epsilon > 0$, and choose $\delta = \min{1, \frac{2}{3}}\epsilon$. Now suppose $ \left| x-1 \right| < 1$.
+    Let $\epsilon > 0$, and choose $\delta = \min(1, \frac{2}{3}\epsilon)$. Now suppose $ \left| x-1 \right| < 1$.
     \begin{align*}
         \left| x-1 \right| < 1 \\
         -1 < x-1 < 1 \\
